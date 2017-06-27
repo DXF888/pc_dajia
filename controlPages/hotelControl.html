@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>大嫁网后台管理系统</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../logo.ico" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/cssControl/control.css" />
+	</head>
+
+	<body>
+		<!--main(主要内容)-->
+		<div class="main">
+			<!--内容-->
+			<div class="content hotel-main-content fl">
+				<div class="content-search hotel-content-search">
+					<div class="content-search-box fl">
+						<input type="text" placeholder="输入酒店ID或关键字查找" />
+						<a href="javascript:;"><img src="../img/imgControl/sousuo.png" /></a>
+					</div>
+					<div class="btns fr">
+						<a class="combo-compile hotel-content-search-a1" href="hotelMessageControl.html" name="hotelMessageControl.html" target="right">添加</a>
+						<button class="hotel-content-search-button1">全选</button>
+						<button class="hotel-content-search-button1">批量删除</button>
+					</div>
+				</div>
+				<div class="shopMessageControl-container clearfix">
+					<div class="shopMessageControl-content-top">
+						<div class="shopMessageControl-content-right hotel-right-control hotel-right1-control">
+							<form>
+								<table>
+									<input class="fl" type="checkbox" id="" value="" />
+									<tr>
+										<td>酒店名称</td>
+										<td>酒店星级</td>
+										<td>地址</td>
+										<td>区域</td>
+										<td>图片</td>
+										<td>图片链接</td>
+									</tr>
+									<tr>
+										<td>酒店名称</td>
+										<td>星级</td>
+										<td>酒店地址地址地址地址地址</td>
+										<td>区域</td>
+										<td>
+											<img src="../img/imgControl/tupian.png" />
+										</td>
+										<td>
+											<input type="text" placeholder="链接地址" />
+											<p class="shopMessageControl-ul1-p1">上传时间： <span></span></p>
+										</td>
+									</tr>
+								</table>
+								<table>
+									<tr>
+										<td>排序</td>
+										<td>联系方式</td>
+										<td>是否置顶</td>
+										<td>首页推荐</td>
+										<td>营业状态</td>
+										<td>操作</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>8888</td>
+										<td>是</td>
+										<td>是</td>
+										<td>正常营业</td>
+										<td class="shopMessageControl-content-right-td1">
+											<a class="combo-compile" href="hotelMessageControl.html" name="hotelMessageControl.html" target="right">编辑</a>
+											<button>删除</button>
+											<a class="combo-compile" href="banquetControl.html" name="banquetControl.html" target="right">宴会厅</a>
+											<a class="combo-compile" href="comboControl.html" name="comboControl.html" target="right">菜单</a>
+										</td>
+									</tr>
+								</table>
+							</form>
+							<ul class="shopMessageControl-content-right-operation fr">
+								<li>
+									<a href="javascript:;">设为置顶</a>
+								</li>
+								<li>
+									<a href="javascript:;">取消置顶</a>
+								</li>
+								<li>
+									<a href="javascript:;">首页置顶</a>
+								</li>
+								<li>
+									<a href="javascript:;">取消首页置顶</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+		<script src="../js/hotelControl.js"></script>
+		<script src="../js/control.js"></script>
+	</body>
+
+</html>

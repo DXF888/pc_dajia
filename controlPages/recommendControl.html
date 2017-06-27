@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>大嫁网后台管理系统</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../logo.ico" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/cssControl/control.css" />
+	</head>
+
+	<body>
+
+		<!--main(主要内容)-->
+		<div class="main">
+			<!--内容-->
+			<div class="content recommendControl-content fl">
+				<h3>精品推荐</h3>
+				<div class="content-search">
+					<div class="content-search-box">
+						<input type="text" placeholder="点击搜索图片" />
+						<a href="javascript:;"><img src="../img/imgControl/sousuo.png" /></a>
+					</div>
+					<input type="checkbox" class="content-search-checkbox" />
+					<label for="checkbox">全选</label>
+					<a href="javascript:;" class="batchesDelete"><img src="../img/imgControl/piliangshanchu.png" /></a>
+					<input type="button" class="content-search-add" value="添加" />
+				</div>
+				<div class="content-nav clearfix">
+					<ul>
+						<li>
+							<a href="javascript:;">标题</a>
+						</li>
+						<li>
+							<a href="javascript:;">描述信息</a>
+						</li>
+						<li>
+							<a href="javascript:;">图片</a>
+						</li>
+						<li>
+							<a href="javascript:;">图片链接</a>
+						</li>
+					</ul>
+				</div>
+				<form action="" method="">
+					<div class="content-container">
+
+						<div class="recommend-conten-title fl">
+							<p>标题</p>
+						</div>
+						<div class="recommend-conten-describe fl">
+							<p>详情描述</p>
+						</div>
+						<div class="content-main-left recommend-conten-left fl">
+							<img src="../img/imgControl/tupian.png" />
+							<p>
+								<input type="text" placeholder="图片路径" />
+								<input type="file" />
+							</p>
+						</div>
+						<div class="content-main-right recommend-conten-right fl">
+							<input type="text" class="recommend-conten-input1 content-main-checkbox" placeholder="链接地址" />
+							<p class="content-main-right-p2">上传时间</p>
+							<p class="content-main-right-p1 recommend-conten-p1">
+								<a href="javascript:;" class="delete-btn">删除</a>
+							</p>
+						</div>
+					</div>
+					<input class="content-main-save" type="submit" value="保存" />
+				</form>
+			</div>
+		</div>
+	
+		<script src="../lib/jQuery/jquery1.42.min.js"></script>
+		<script src="../lib/Template/template-native.js"></script>
+		<script type="../text/template" id="cortrolContent">
+			<% for(var i=0;i<4;i++) {%>
+			<div class="content-main">
+				<input class="fl content-main-checkbox" type="checkbox" id="" value="" />
+				<div class="recommend-conten-title fl">
+					<p>
+						<%=title%>
+					</p>
+				</div>
+				<div class="recommend-conten-describe fl">
+					<p>
+						<%=describe%>
+					</p>
+				</div>
+				<div class="content-main-left recommend-conten-left fl">
+					<img src="../img/imgControl/tupian.png" />
+					<p>
+						<input type="text" placeholder="图片路径" />
+						<input type="file" />
+					</p>
+				</div>
+				<div class="content-main-right recommend-conten-right fl">
+					<input type="text" class="recommend-conten-input1 content-main-checkbox" placeholder="链接地址" />
+					<p class="content-main-right-p2 ">
+						<%=time%>
+					</p>
+					<p class="content-main-right-p1 recommend-conten-p1">
+						<a href="javascript:;" class="delete-btn">
+							<%=det%>
+						</a>
+					</p>
+				</div>
+			</div>
+			<% } %>
+		</script>
+		<script type="text/javascript">
+			var data = {
+				name: '图片名称',
+				size: '图片大小',
+				time: '上传时间',
+				det: '删除',
+				title: '标题',
+				describe: '详情描述'
+			}
+			var contentMain = template("cortrolContent", data);
+			$('.content-container').html(contentMain);
+		</script>
+		<script src="../js/control.js"></script>
+		<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+		<script src="../js/imgesControl.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>大嫁网后台管理系统</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../logo.ico" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/cssControl/control.css" />
+	</head>
+
+	<body>
+		<!--main(主要内容)-->
+		<div class="main">
+			<!--内容-->
+			<div class="content hotel-main-content fl">
+				<div class="content-search hotel-content-search">
+					<div class="content-search-box fl">
+						<input type="text" placeholder="输入酒店ID或关键字查找" />
+						<a href="javascript:;"><img src="../img/imgControl/sousuo.png" /></a>
+					</div>
+					<div class="btns fr">
+						<a class="combo-compile hotel-content-search-a1" href="banquetMessageControl.html" name="banquetMessageControl.html" target="right">添加</a>
+						<button class="hotel-content-search-button1">全选</button>
+						<button class="hotel-content-search-button1">批量删除</button>
+					</div>
+				</div>
+				<div class="shopMessageControl-container">
+					<div class="shopMessageControl-content-middle clearfix">
+						<div class="shopMessageControl-content-right hotel-right-control hotel-right2-control fl">
+							<input class="fl" type="checkbox" id="" value="" />
+							<form>
+								<table>
+									<tr>
+										<td>宴会厅名称</td>
+										<td>桌数</td>
+										<td>立柱</td>
+										<td>图片</td>
+										<td>图片链接</td>
+										<td>操作</td>
+									</tr>
+									<tr>
+										<td>宴会厅名称</td>
+										<td>10桌</td>
+										<td>5根</td>
+										<td>
+											<img src="../img/imgControl/tupian.png" />
+										</td>
+										<td>
+											<input type="text" placeholder="链接地址" />
+											<p class="shopMessageControl-ul1-p1">上传时间： <span></span></p>
+										</td>
+										<td>
+											<p class="banquet-compile-p">
+												<a class="banquet-compile" href="banquetMessageControl.html" name="banquetMessageControl.html" target="right">编辑</a>
+												<button class="banquet-compile">删除</button>
+											</p>
+										</td>
+									</tr>
+								</table>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+		<script src="../js/hotelControl.js"></script>
+		<script src="../js/control.js"></script>
+	</body>
+
+</html>

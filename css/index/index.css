@@ -1,0 +1,668 @@
+/*返回顶部*/
+
+#return {
+	position: fixed;
+	left: 10px;
+	top: 50%;
+	z-index: 1000;
+	display: none;
+	opacity: .3;
+}
+
+#return:hover {
+	opacity: 1;
+}
+
+
+/*头部开始*/
+
+#header {
+	margin-top: 10px;
+}
+
+#header .log {
+	margin-right: 5%;
+}
+
+#header .log img {
+	width: 100%;
+	height: 100%;
+}
+
+#header .nav {
+	width: 55%;
+	margin-top: 6%;
+}
+
+#header .nav ul {
+	width: 100%;
+	overflow: hidden;
+}
+
+#header .nav li {
+	float: left;
+	margin-right: 12%;
+}
+
+#header .nav li:last-child {
+	margin-right: 0;
+}
+
+#header .nav li a {
+	color: #ff6666;
+	font-size: 17px;
+}
+
+#header .nav li a:hover {
+	color: #7b7b7b;
+}
+
+#header .search {
+	width: 20%;
+	padding-top: 2%;
+}
+
+#header .search .search-nav {
+	position: relative;
+	margin-left: -10%;
+}
+
+#header .search .search-nav ul {
+	overflow: hidden;
+}
+
+#header .search .search-nav li {
+	float: left;
+	margin-right: 29px;
+}
+
+#header .search .search-nav li:last-child {
+	margin-right: 0;
+}
+
+#header .search .search-nav li a {
+	display: inline-block;
+	font-size: 15px;
+}
+
+#header .search .search-nav li:nth-child(1) img {
+	width: 28%;
+	position: absolute;
+	top: 28px;
+	left: -10px;
+	display: none;
+	z-index: 999;
+}
+
+#header .search .search-nav li:nth-child(2) img {
+	width: 28%;
+	position: absolute;
+	top: 28px;
+	left: 88px;
+	display: none;
+	z-index: 999;
+}
+
+#header .search .search-nav li:nth-child(1) a:hover+img {
+	display: inline-block;
+}
+
+#header .search .search-nav li:nth-child(2) a:hover+img {
+	display: inline-block;
+}
+
+#header .search .search-bar {
+	text-align: right;
+	margin-left: 15%;
+	margin-top: 8%;
+	width: 90%;
+	height: 24px;
+	line-height: 24px;
+}
+#header .search .search-bar input {
+	display: none;
+	outline: none;
+	border: none;
+	width: 86%;
+	height: 24px;
+	line-height: 24px;
+	background-color: transparent;
+}
+
+#header .search .search-bar a {
+	text-align: center;
+	display: inline-block;
+	width: 14%;
+	height: 24px;
+	line-height: 24px;
+	padding-top: 2px;
+}
+
+/*头部结束*/
+
+
+/*横幅开始*/
+
+#banner {
+	margin-top: 10px;
+}
+
+#banner .slideBox {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid #ddd;
+}
+
+#banner .slideBox .hd {
+	height: 15px;
+	overflow: hidden;
+	position: absolute;
+	right: 60px;
+	bottom: 10px;
+	z-index: 1;
+}
+
+#banner .slideBox .hd ul {
+	overflow: hidden;
+	zoom: 1;
+	float: left;
+}
+
+#banner .slideBox .hd ul li {
+	border-radius: 50%;
+	float: left;
+	margin-right: 10px;
+	width: 15px;
+	height: 15px;
+	line-height: 14px;
+	text-align: center;
+	background: rgba(255, 255, 255, .6);
+	cursor: pointer;
+}
+
+#banner .slideBox .hd ul li.on {
+	background: #fff;
+	color: #000;
+}
+
+#banner .slideBox .bd {
+	position: relative;
+	height: 100%;
+	z-index: 0;
+}
+
+#banner .slideBox .bd li {
+	zoom: 1;
+	vertical-align: middle;
+}
+
+#banner .slideBox .bd img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+
+/* 下面是前/后按钮代码，如果不需要删除即可 */
+
+#banner .slideBox .prev {
+	position: absolute;
+	left: 3%;
+	top: 50%;
+	margin-top: -25px;
+	display: block;
+	width: 5%;
+	height: 18%;
+	background: url(../../img/zuojiantou.png) no-repeat;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+#banner .slideBox .next {
+	position: absolute;
+	right: 3%;
+	top: 50%;
+	margin-top: -25px;
+	display: block;
+	width: 5%;
+	height: 18%;
+	background: url(../../img/youjiantou.png) no-repeat;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+#banner .slideBox .next {
+	left: auto;
+	right: 3%;
+	background-position: 8px 5px;
+}
+
+#banner .slideBox .prev:hover,
+#banner .slideBox .next:hover {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+#banner .slideBox .prevStop {
+	display: none;
+}
+
+#banner .slideBox .nextStop {
+	display: none;
+}
+
+
+/*横幅结束*/
+
+
+/*步骤开始*/
+
+#procedure {
+	margin-top: 82px;
+}
+
+#procedure .content {
+	width: 100%;
+	text-align: center;
+}
+
+#procedure .content h2 {
+	font-size: 72px;
+	color: #242424;
+}
+
+#procedure .content h3 {
+	margin-top: 33px;
+	color: #8A8A8A;
+	font-size: 30px;
+	margin-bottom: 5%;
+}
+
+#procedure .content h3 ul {
+	overflow: hidden;
+}
+
+#procedure .content ul li {
+	margin-top: 10%;
+	border-right: 1px solid #8A8A8A;
+	width: 19.9%;
+	float: left;
+}
+
+#procedure .content ul li:last-child,
+#procedure .content ul li:nth-child(5) {
+	border-right: none
+}
+
+#procedure .content ul li a {
+	color: #8A8A8A;
+	font-size: 24px;
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+}
+
+#procedure .content ul li a .procedure-p1 {
+	overflow: hidden;
+	margin: 32px 0;
+}
+
+#procedure .content ul li a .procedure-p2 {
+	overflow: hidden;
+	background: url(../../img/jiantou.png) no-repeat 77% center;
+}
+
+#procedure .content .procedure-content-ul1 li {
+	margin-top: 0;
+}
+
+#procedure .content .hideNav{
+	width: 96%;
+	display: none;
+	overflow: hidden;
+	background-color: #F6F6F6;
+	
+}
+#procedure .content .hideNav li a .procedure-p2{
+	font-size: 16px;
+}
+#procedure .content .hideNav li{
+	border: none;
+	width: 19.9%;
+	margin: 0;
+}
+#procedure .content .hideNav li a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border: none;
+	margin: 5px 0;
+}
+#procedure .content .hideNav li img{
+	vertical-align: middle;
+}
+#procedure .content .hideNav .showNav-procedure-a1{
+	margin-bottom: 0;
+}
+/*步骤结束*/
+
+
+/*酒店开始*/
+
+#container {
+	margin-top: 5%;
+}
+
+#Wedding-Hotel,
+#Photography,
+#Wedding-Dress,
+#Service-Personal,
+#Wedding-Company,
+#Wedding-Dessert,
+#Wedding-Car{
+	margin-top: 10px;
+}
+ #container .main-content-top .main-content-top-left {
+	width: 70%;
+	margin-bottom: 10px;
+}
+
+#container .main-content-top .main-content-top-left h3 {
+	margin-right: 5%;
+	display: inline-block;
+	font-size: 48px;
+	color: #242424;
+}
+
+#container .main-content-top .main-content-top-left span {
+	font-size: 42px;
+	color: #FF6666;
+}
+
+#container .main-content-top .main-content-top-right {
+	padding-top: 1%;
+}
+
+#container .main-content-bottom .main-content-bottom-top li,
+#container .main-content-bottom .main-content-bottom-bottom li {
+	text-align: center;
+	float: left;
+	margin-right: 1%;
+	border: 1px solid #8A8A8A;
+}
+
+#container .main-content-bottom .main-content-bottom-top li a,
+#container .main-content-bottom .main-content-bottom-bottom li a {
+	color: #242424;
+}
+
+#container .main-content-bottom .main-content-bottom-top li {
+	width: 32.5%;
+}
+
+#container .main-content-bottom .main-content-bottom-bottom li {
+	margin-top: 1%;
+	width: 24%;
+}
+
+#container .main-content-bottom .main-content-bottom-top li:last-child,
+#container .main-content-bottom .main-content-bottom-bottom li:last-child {
+	margin-right: 0;
+}
+
+#container .main-content-bottom .main-content-bottom-top li img,
+#container .main-content-bottom .main-content-bottom-bottom li img {
+	width: 100%;
+}
+
+#container .main-content-bottom .main-content-bottom-top li p {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+#container .main-content-bottom .main-content-bottom-bottom li p {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+#container .main-content-bottom .main-content-bottom-bottom li {}
+
+
+/*酒店结束*/
+
+
+/*底部开始*/
+
+#footer {
+	font-size: 18px;
+	margin-top: 105px;
+	background: #F6F6F6;
+	padding-bottom: 2%;
+}
+
+#footer .footer-top {
+	padding-top: 54px;
+	padding-bottom: 54px;
+	text-align: center;
+	width: 100%;
+	/*height: 330px;*/
+}
+
+#footer .footer-top .footer-top-right {
+	padding-right: 12%;
+}
+
+#footer .footer-top .footer-top-left {
+	padding-right: 10%;
+}
+
+#footer .footer-bottom {
+	text-align: center;
+}
+
+#footer .footer-bottom .footer-bottom-p2 {
+	margin-top: 28px;
+}
+
+#footer .footer-bottom img {
+	margin-top: 14px;
+}
+
+
+/*底部结束*/
+
+
+/*酒店开始*/
+
+
+/*子菜单开始*/
+
+#subnav {
+	padding: 20px 0;
+	font-size: 24px;
+}
+
+#subnav a:nth-child(1) {
+	color: #242424;
+}
+
+
+/*子菜单结束*/
+
+
+/*酒店内容开始*/
+
+#hotel ul {
+	margin-top: 30px;
+	overflow: hidden;
+	width: 100%;
+}
+
+#hotel ul li {
+	float: left;
+	margin-right: 2%;
+	width: 23.3%;
+	border: 1px solid #bababb;
+	border-top: none;
+	padding-bottom: 15px;
+}
+
+#hotel ul li p {
+	margin-top: 18PX;
+	padding-left: 20px;
+	color: #bababb;
+	font-size: 20px;
+}
+
+#hotel ul li a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+#hotel ul li a p:nth-child(3) span:nth-child(1) {
+	display: inline-block;
+	padding-right: 15px;
+}
+
+#hotel ul li a p:nth-child(3) span:nth-child(1) img {
+	padding-right: 10px;
+}
+
+#hotel ul li a p:nth-child(3) span:nth-child(2) {
+	padding-left: 20px;
+}
+
+#hotel ul li:last-child {
+	margin-right: 0;
+}
+
+#hotel ul li .hotel-ul1-img {
+	width: 100%;
+}
+
+
+/*酒店内容结束*/
+
+
+/*酒店结束*/
+
+
+/*分页开始*/
+
+.pages {
+	overflow: hidden;
+	width: 900px;
+	margin: 40px auto 0 auto;
+}
+
+.pages #Pagination {
+	float: left;
+	overflow: hidden;
+}
+
+.pages #Pagination .pagination {
+	height: 40px;
+	text-align: right;
+	font-family: \u5b8b\u4f53, Arial;
+}
+
+.pages #Pagination .pagination a,
+.pages #Pagination .pagination span {
+	margin-right: 15px;
+	float: left;
+	display: inline;
+	padding: 11px 13px;
+	border: 1px solid #e6e6e6;
+	background: #f6f6f6;
+	color: #666666;
+	font-family: \u5b8b\u4f53, Arial;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.pages #Pagination .pagination .current {
+	background: #FB9F86;
+	color: #fff;
+}
+
+.pages #Pagination .pagination .prev,
+.pages #Pagination .pagination .next {
+	float: left;
+	padding: 11px 13px;
+	border: 1px solid #e6e6e6;
+	background: #f6f6f6;
+	color: #666666;
+	cursor: pointer;
+}
+
+.pages #Pagination .pagination .prev i,
+.pages #Pagination .pagination .next i {
+	display: inline-block;
+	width: 4px;
+	height: 11px;
+	margin-right: 5px;
+	background: url(../images/icon.fw.png) no-repeat;
+}
+
+.pages #Pagination .pagination .prev i {
+	background-position: -144px -1px;
+	*background-position: -144px -4px;
+}
+
+.pages #Pagination .pagination .next i {
+	background-position: -156px -1px;
+	*background-position: -156px -4px;
+}
+
+.pages #Pagination .pagination .pagination-break {
+	padding: 11px 5px;
+	border: none;
+	border-left: 1px solid #e6e6e6;
+	background: none;
+	cursor: default;
+}
+
+.pages .searchPage {
+	float: left;
+	padding: 8px 0;
+}
+
+.pages .searchPage .page-sum {
+	padding: 11px 13px;
+	color: #999999;
+	font-family: \u5b8b\u4f53, Arial;
+	font-size: 14px;
+}
+
+.pages .searchPage .page-go {
+	padding: 8px 0;
+	color: #999999;
+	font-family: \u5b8b\u4f53, Arial;
+	font-size: 14px;
+	padding: 10px 0\9;
+	*padding: 6px 0;
+}
+
+.pages .searchPage .page-go input {
+	width: 21px;
+	height: 20px;
+	margin: 0 5px;
+	padding-left: 5px;
+	border: 1px solid #e4e4e4;
+}
+
+.pages .searchPage .page-btn {
+	padding: 10px 20px;
+	background: #FFFFFF;
+	border-radius: 2px;
+	color: #5c6371;
+	font-family: Arial, 'Microsoft YaHei';
+	font-size: 18px;
+	text-decoration: none;
+}
+
+
+/*分页结束*/

@@ -1,0 +1,96 @@
+/*登录页面开始*/
+body{
+	background: url(../../img/bg.png) no-repeat;
+	background-size: cover;
+}
+.container{
+	text-align: center;
+}
+h1,h2,p{
+	color: #f05053;
+}
+h1{
+	margin-top: 2%;
+	font-size: 48px;
+}
+h2{
+	margin-top: 22px;
+	font-size: 16px;
+}
+.login{
+	position: relative;
+	width: 60%;
+	height: 438px;
+	background-color: rgba(255,255,255,.7);
+	margin: 0 auto;
+	margin-top: 35px;
+	font-size: 30px;
+	font-family: "微软雅黑";
+	color:#fb9f86;
+}
+.login .username,.code,.password{
+	text-align: left;
+	margin-left: 114px;
+}
+.login .username{
+	padding-top: 99px;
+}
+.login .username label{
+	margin-right: 25px;
+}
+.login .password label{
+	margin-right: 54px;
+} 
+.login .code label{
+	margin-right:16px;
+}
+.login input{
+	padding-left: 5px;
+	font-size: 30px;
+	font-family: "微软雅黑";
+	height: 40px;
+	line-height: 40px;
+	border:none;
+	border-bottom: 1px solid #fb9f86;
+	background: none;
+	outline:0px;
+	color: #242424;
+}
+.login .username,.password{
+	margin-bottom: 46px;
+}
+
+.login .code .code-input{
+	width: 40%;
+}
+.login .code .code-input input{
+	width: 43%;
+}
+.login .code .code-number {
+	margin-top: -7px;
+}
+.login .code .code-number span{
+	padding-left: 12px;
+	font-size: 16px;
+	color: #000000;
+}
+.login .code .code-number a{
+	font-size: 16px;
+	color: #1B76A2;
+}
+.login .code .code-number .code-a1{
+	display: inline-block;
+	height: 48px;
+}
+
+.login .subit{
+	position: absolute;
+	top: 340px;
+	left:50%;
+	margin-left: -95px;
+}
+.container .reference{
+	margin-top: 33px;
+	margin-bottom: 2%;
+}
+/*登录页面结束*/

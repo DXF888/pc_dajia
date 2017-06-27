@@ -1,0 +1,974 @@
+/*头部开始*/
+
+#header {
+	position: relative;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 100%;
+	height: 80px;
+	background: url(../../img/imgControl/bg.png) no-repeat;
+	background-size: cover;
+	border-bottom: 1px solid #f77e83;
+}
+
+#header .logo {
+	margin-left: 20px;
+	width: 75%;
+	height: 100%;
+}
+
+#header .logo img {
+	width: 20%;
+	height: 100%;
+}
+
+#header .welcome {
+	/*	width: px;*/
+	padding: 0 23px;
+	border-radius: 10px;
+	height: 44px;
+	line-height: 44px;
+	background: rgba(255, 255, 255, .5);
+	color: #f05053;
+	font-size: 18px;
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+}
+
+#header .welcome .quit {
+	display: inline-block;
+	font-size: 18px;
+	border: none;
+	color: #f05053;
+	cursor: pointer;
+	outline: none;
+	background-image: url(../../img/imgControl/tuichu.png);
+	background-position: center left;
+	background-repeat: no-repeat;
+	padding-left: 23px;
+	background-color: transparent;
+}
+
+
+/*头部结束*/
+
+
+/*主要内容开始*/
+
+.main {
+	overflow: hidden;
+	margin-top: 10px;
+	width: 100%;
+}
+
+
+/*左侧导航*/
+
+.main .navMenu {
+	width: 15%;
+	border-right: 1px solid #fb9f86;
+}
+
+.main .navMenu .nav-ul>li a {
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	height: 54px;
+	line-height: 54px;
+	font-size: 18px;
+	color: #FB9F86;
+	list-style-type: circle;
+	background: url(../../img/imgControl/dian.png) no-repeat 25% center;
+}
+
+.main .navMenu .nav-ul>li>a {
+	background: url(../../img/imgControl/shouyemeirong.png) no-repeat 15% center;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	color: #FFFFFF;
+	background-color: #fb9f86;
+	border-bottom: 1px solid #F05053;
+	text-align: center;
+}
+
+.main .navMenu .nav-ul>li ul {
+	display: none;
+}
+
+.main .navMenu .nav-ul>li ul .subnu {
+	display: none;
+}
+
+.main .navMenu .nav-ul>li:nth-child(2)>a {
+	background-image: url(../../img/imgControl/guanyuwomen.png);
+}
+
+.main .navMenu .nav-ul>li:nth-child(3)>a {
+	background-image: url(../../img/imgControl/xingfuzixun.png);
+}
+
+.main .navMenu .nav-ul>li:nth-child(4)>a {
+	background-image: url(../../img/imgControl/shishangxinwen.png);
+}
+
+.main .navMenu .nav-ul>li:nth-child(5)>a {
+	background-image: url(../../img/imgControl/kehushuo.png);
+}
+
+.main .navMenu .nav-ul>li:nth-child(6)>a {
+	background-image: url(../../img/imgControl/bangzhuzhongxin.png);
+}
+
+.main .navMenu .nav-ul>li:nth-child(7)>a {
+	background-image: url(../../img/imgControl/hunlixuetang.png);
+}
+
+.main .navMenu .nav-ul>li:nth-child(8)>a {
+	background-image: url(../../img/imgControl/yonghuguanli.png);
+}
+
+.main .navMenu .nav-ul>li:nth-child(9)>a {
+	background-image: url(../../img/imgControl/dingdanguanli.png);
+}
+
+.main .navMenu .nav-ul>li:nth-child(10)>a {
+	background-image: url(../../img/imgControl/fanjinguanli.png);
+}
+
+.main .navMenu .nav-ul>li:nth-child(11)>a {
+	background-image: url(../../img/imgControl/gouwuche.png);
+}
+
+.main .navMenu .nav-ul>li:nth-child(12)>a {
+	background-image: url(../../img/imgControl/shoucangjia.png);
+}
+
+.main .navMenu .nav-ul>li:nth-child(13)>a {
+	background-image: url(../../img/imgControl/dingdanguanli.png);
+}
+
+.main .navMenu .nav-ul>li:nth-child(14)>a {
+	background-image: url(../../img/imgControl/zhanghaoguanli.png));
+}
+
+.main .navMenu .nav-ul>li>a img {
+	position: absolute;
+	left: 85%;
+	top: 22px
+}
+
+.main .navMenu .nav-ul .subnav>ul>li>a {
+	border-bottom: 1px solid #FB9F86;
+}
+
+.main .navMenu .nav-ul .subnav>ul>li .submenu li {
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.main .navMenu .nav-ul .subnav>ul>li .submenu li a {
+	text-align: left;
+	padding-left: 40%;
+}
+
+.main .navMenu .nav-ul .subnav>ul>li:last-child {
+	border: none;
+}
+
+
+/******* 图片管理  ******/
+
+
+/*右侧主要内容*/
+
+.main .content {
+	width: 84.9%;
+	color: #000000;
+}
+
+.main .imgeControl-content,
+.main .hotelMessageControl-content,
+.main .recommendControl-content,
+.hotelMessageControl-content,
+.main .hotel-main-content {
+	width: 100%;
+}
+
+.main .content .content-header {
+	overflow: hidden;
+	width: 100%;
+	background: #eeeeee;
+	height: 54px;
+	line-height: 54px;
+	font-size: 18px;
+	color: #FF6666;
+}
+
+.main .content .content-header {
+	padding-left: 36px;
+}
+
+.main .content>h3 {
+	margin-left: 36px;
+	margin-top: 33px;
+	font-size: 24px;
+	color: #fb9f86;
+}
+
+.main .content .content-search {
+	line-height: 50px;
+	text-align: right;
+	vertical-align: middle;
+	padding-right: 5%;
+	margin: 2% 0;
+}
+
+.main .content .content-search .hotel-content-search-button1,
+.main .content .content-search .hotel-content-search-a1 {
+	display: inline-block;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	background: transparent;
+	color: #FFFFFF;
+	border: 1px solid #FB9F86;
+	width: 80px;
+	border-radius: 8px;
+	outline: none;
+	font-size: 18px;
+	background-color: #FB9F86;
+}
+
+.main .content .content-search .content-search-box {
+	border: 1px solid #f05053;
+	width: 454px;
+	display: inline-block;
+	padding-left: 5px;
+	margin-right: 2%;
+	border-radius: 8px;
+}
+
+.main .content .content-search .content-search-box input[type="text"] {
+	width: 89%;
+	height: 50px;
+	line-height: 50px;
+	outline: none;
+	border: none;
+	font-size: 24px;
+	vertical-align: middle;
+}
+
+.main .content .content-search .content-search-box a {
+	display: inline-block;
+	border-left: 1px solid #f05053;
+	height: 53px;
+	line-height: 50px;
+	vertical-align: middle;
+	text-align: center;
+	width: 10%;
+}
+
+.main .content .content-search .content-search-box a img {
+	position: relative;
+	top: 16px;
+}
+
+.main .content .content-search .content-search-box :-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #FB9F86;
+	opacity: 1;
+}
+
+.main .content .content-search .content-search-box ::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #FB9F86;
+	opacity: 1;
+}
+
+.main .content .content-search .content-search-box input:-ms-input-placeholder {
+	color: #FB9F86;
+	opacity: 1;
+}
+
+.main .content .content-search .content-search-box input::-webkit-input-placeholder {
+	color: #FB9F86;
+	opacity: 1;
+}
+
+.main .content .content-search label {
+	margin-right: 2%;
+	font-weight: 700;
+}
+
+.main .content .content-search .batchesDelete {
+	display: inline-block;
+	width: 125px;
+	height: 40px;
+	position: relative;
+	top: 15px;
+}
+
+.main .content .content-search .content-search-add {
+	cursor: pointer;
+	outline: none;
+	width: 50px;
+	height: 40px;
+	line-height: 40px;
+	color: #F05053;
+	border: 1px solid #F05053;
+	background-color: #ffffff;
+	border-radius: 8px;
+	vertical-align: bottom;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.main .content .content-main {
+	overflow: hidden;
+	margin-left: 36px;
+	margin-right: 36px;
+	margin-top: 50px;
+	border-bottom: 1px solid #FB9F86;
+	padding-bottom: 2%;
+}
+
+.main .content .content-main input {
+	font-size: 32px;
+	outline: none;
+	padding-left: 15px;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: bottom;
+	width: 42%;
+	margin-left: 2%;
+}
+
+.main .content .content-main input[type=file] {
+	color: #FB9F86;
+	font-size: 20px;
+	width: 100px;
+}
+
+.main .content .content-main input[type=checkbox] {
+	position: relative;
+	top: 70px;
+	height: 20px;
+	line-height: 20px;
+	width: 20px;
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+.main .content .content-main .content-main-left {
+	position: relative;
+	width: 60%;
+}
+
+.main .content .content-main .content-main-left a {
+	vertical-align: bottom;
+	display: inline-block;
+	width: 130px;
+	height: 50px;
+}
+
+.main .content .content-main .content-main-left span {
+	position: absolute;
+	left: 184px;
+	font-size: 32px;
+	color: #242424;
+}
+
+.main .content .content-main .content-main-left .content-main-left-sp1 {
+	top: 1%;
+}
+
+.main .content .content-main .content-main-left .content-main-left-sp2 {
+	top: 30%;
+}
+
+.main .content .content-main .content-main-right {
+	padding-left: 5%;
+	width: 29%;
+}
+
+.main .content .content-main .content-main-right p {
+	font-size: 24px;
+	color: #242424;
+}
+
+.main .content .content-main .content-main-right input {
+	margin-top: 48px;
+	width: 96%;
+}
+
+.main .content .content-main .content-main-right .content-main-right-p1 {
+	margin-left: 150px;
+	text-align: right;
+}
+
+.main .content .content-main .content-main-right .content-main-right-p1 a {
+	margin-right: 12px;
+	color: #242424;
+}
+
+.main .content .content-main-save {
+	display: inline-block;
+	height: 40px;
+	width: 125px;
+	margin-left: 36px;
+	margin-top: 2%;
+	margin-bottom: 50px;
+	background-color: #FFFFFF;
+	border-radius: 8px;
+	color: #FB9F86;
+	border: 1px solid #FB9F86;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+
+/*主要内容结束*/
+
+
+/******* 图片管理  ******/
+
+
+/******* 推荐管理  ******/
+
+.main .content .recommend-conten-title {
+	font-size: 32px;
+	padding: 60px 0;
+	text-align: center;
+	width: 10%;
+}
+
+.main .content .recommend-conten-describe {
+	font-size: 32px;
+	padding: 60px 0;
+	text-align: center;
+	width: 18%;
+}
+
+.main .content .content-nav {
+	height: 54px;
+	line-height: 54px;
+	background: #FB9F86;
+	margin-left: 36px;
+}
+
+.main .content .content-nav ul li {
+	float: left;
+}
+
+.main .content .content-nav ul li:nth-child(1) {
+	margin-left: 36px;
+	width: 11%;
+}
+
+.main .content .content-nav ul li:nth-child(2) {
+	width: 25%;
+}
+
+.main .content .content-nav ul li:nth-child(3) {
+	width: 30%;
+}
+
+.main .content .content-nav ul li:nth-child(4) {
+	width: 30%;
+}
+
+.main .content .content-nav ul li a {
+	color: white;
+	text-align: center;
+	font-size: 24px;
+}
+
+.main .content .content-main .recommend-conten-left {
+	width: 38%;
+	text-align: center;
+}
+
+.main .content .content-main .recommend-conten-left input {
+	text-align: left;
+	width: 50%;
+}
+
+.main .content .content-main .recommend-conten-left input[type=file] {
+	width: 100px;
+	vertical-align: bottom;
+}
+
+.main .content .content-main .recommend-conten-left img {
+	margin-bottom: 20px;
+}
+
+.main .content .content-main-right .content-main-right-p2,
+.main .content .content-main-right .recommend-conten-p1 {
+	display: inline-block;
+}
+
+.main .content .content-main .recommend-conten-right {
+	padding: 10px;
+}
+
+.main .content .content-main .recommend-conten-right p {
+	margin-top: 30px;
+}
+
+
+/******* 推荐管理  ******/
+
+
+/******* 商铺信息管理  ******/
+
+.main .content .shopMessageControl-container {
+	overflow: hidden;
+	font-size: 18px;
+}
+
+.main .content .shopMessageControl-container input[type=file] {
+	width: 106px;
+	font-size: 22px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.main .content .shopMessageControl-content-left {
+	position: relative;
+	text-align: center;
+	width: 15%;
+}
+
+.main .content .shopMessageControl-content-left input[type=checkbox] {
+	position: absolute;
+	right: 16px;
+	top: 50px;
+}
+
+.main .content .shopMessageControl-content-left a {
+	display: block;
+	width: 100%;
+	height: 126px;
+}
+
+.main .content .shopMessageControl-content-left p {
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+.main .content .shopMessageControl-content-top,
+.main .content .shopMessageControl-content-middle,
+.main .content .shopMessageControl-content-bottom {
+	overflow: hidden;
+	margin: 20px 20px 0 20px;
+}
+
+.main .content .shopMessageControl-content-right,
+.main .content .shopMessageControl-content-bottom-right {
+	width: 98%;
+}
+
+.main .content .shopMessageControl-content-right .banquet-compile-p .banquet-compile {
+	display: inline-block;
+	text-align: center;
+	border: 1px solid #FB9F86;
+	border-radius: 12px;
+	margin-top: 10px;
+	width: 60px;
+	height: 50px;
+	line-height: 50px;
+	background-color: #FB9F86;
+	color: #FFFFFF;
+}
+
+.main .content .shopMessageControl-content-bottom-right form {
+	margin-bottom: 20px;
+}
+
+.main .content .shopMessageControl-content-right table,
+.main .content .shopMessageControl-content-bottom-right table {
+	border: 1px solid #FB9F86;
+	text-align: center;
+	width: 98%;
+	border-collapse: collapse;
+	margin-left: 2%;
+}
+
+.main .content .shopMessageControl-content-right table tr:nth-child(1),
+.main .content .shopMessageControl-content-bottom-right table tr:nth-child(1) {
+	background-color: #FB9F86;
+	font-size: 18px;
+	color: #FFFFFF;
+	width: 100%;
+}
+
+.main .content .shopMessageControl-content-right table tr:nth-child(2) td,
+.main .content .shopMessageControl-content-bottom-right table tr:nth-child(2) td {
+	border: 1px solid #FB9F86;
+	padding: 20px 0;
+}
+
+.main .content .shopMessageControl-content-right table tr:nth-child(2) td:last-child,
+.main .content .shopMessageControl-content-bottom-right table tr:nth-child(2) td:last-child {
+	padding-right: 10px;
+}
+
+.main .content .shopMessageControl-content-right table tr:nth-child(2) td:last-child p,
+.main .content .shopMessageControl-content-bottom-right table tr:nth-child(2) td:last-child p {
+	font-size: 18px;
+	/*text-align: right;*/
+}
+
+.main .content .shopMessageControl-content-right table tr:nth-child(2) td:last-child p a,
+.main .content .shopMessageControl-content-bottom-right table tr:nth-child(2) td:last-child p a {
+	margin-right: 5px;
+	/*color: #242424;*/
+}
+
+.main .content .shopMessageControl-content-right table tr:nth-child(2) td:last-child input,
+.main .content .shopMessageControl-content-bottom-right table tr:nth-child(2) td:last-child input {
+	font-size: 18px;
+	outline: none;
+}
+
+.main .content .shopMessageControl-content-bottom-right table tr:nth-child(2) td:last-child button,
+.main .content .shopMessageControl-content-bottom-right table .combo-compile {
+	display: inline-block;
+	background-color: #FB9F86;
+	text-align: center;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 18px;
+	outline: none;
+	color: #FFFFFF;
+}
+
+.main .content .shopMessageControl-content-right table tr:nth-child(1) td,
+.main .content .shopMessageControl-content-bottom-right table tr:nth-child(1) td {
+	padding: 0 10px;
+	border: none;
+}
+
+.main .content .shopMessageControl-content-right-operation,
+.main .content .shopMessageControl-content-right-operation2 {
+	/*overflow: hidden;
+	padding-left: 32%;
+	padding-bottom: 2%;*/
+}
+
+.main .content .shopMessageControl-content-right-operation2 {
+	padding-left: 42%;
+}
+
+.main .content .shopMessageControl-content-right-operation li,
+.main .content .shopMessageControl-content-right-operation2 li {
+	padding: 0 10px;
+	text-align: center;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	background-color: #FB9F86;
+	border-radius: 6px;
+	font-size: 18px;
+	margin-right: 10px;
+	margin-top: 20px;
+}
+
+.main .content .shopMessageControl-content-right-operation li a,
+.main .content .shopMessageControl-content-right-operation2 li a {
+	display: inline-block;
+	color: #FFFFFF;
+	width: 100%;
+}
+
+
+/******* 商铺信息管理  ******/
+
+
+/******* 酒店管理开始  ******/
+
+.main .content .hotel-content-search {
+	overflow: hidden;
+	text-align: left;
+	padding-left: 36px;
+}
+
+.main .content .shopMessageControl-content-right .shopMessageControl-content-right-td1 a {
+	display: inline-block;
+	width: 80px;
+	height: 38px;
+	line-height: 38px;
+	background-color: #FB9F86;
+	border: none;
+	font-size: 18px;
+	color: #FFFFFF;
+	text-align: center;
+	border-radius: 8px;
+}
+
+.main .content .shopMessageControl-content-right button {
+	width: 80px;
+	height: 38px;
+	line-height: 38px;
+	background-color: #FB9F86;
+	border: none;
+	font-size: 18px;
+	color: #FFFFFF;
+	text-align: center;
+	border-radius: 8px;
+}
+
+
+/******* 酒店管理结束  ******/
+
+
+/******* 酒店详情管理开始 ******/
+
+.main .content .hotelMessageControl-container {
+	position: relative;
+	padding: 0 40px 0 20px;
+	text-align: center;
+}
+
+.main .content .hotelMessageControl-container table {
+	color: #7d7d7d;
+	font-size: 18px;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.main .content .hotelMessageControl-container table .comboMenu,
+.dishName {
+	width: 72px;
+	vertical-align: top;
+}
+
+.main .content .hotelMessageControl-container table .comboMenu input,
+.dishName input {
+	width: 80%;
+}
+
+.main .content .hotelMessageControl-container table .dishName input,
+.dishName input {
+	width: 90%;
+}
+
+.main .content .menu-add,
+.main .content .dish-add,
+.main .content .dish-subtract,
+.main .content .menu-subtract {
+	font-size: 26px;
+	cursor: pointer;
+}
+
+.main .content .hotelMessageControl-container table caption {
+	font-size: 36px;
+	color: #7D7D7D;
+	margin: 45px 0;
+}
+
+.main .content .hotelMessageControl-container .hotelMessageControl-container table,
+th,
+td {
+	border: 1px solid black;
+	text-align: center;
+}
+
+.main .content .hotelMessageControl-container table,
+tr {
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+}
+
+.main .content .hotelMessageControl-container table tr input[type=file] {
+	border: none;
+	margin-top: 10px;
+}
+
+.main .content .hotelMessageControl-container table tr .pc-uploading,
+.move-uploading {
+	width: 120px;
+}
+
+.main .content .hotelMessageControl-container table tr .th1 {
+	width: 216px
+}
+
+.main .content .hotelMessageControl-container table input {
+	width: 96%;
+	border: none;
+	outline: none;
+	/*font-size: 16px;*/
+}
+
+.main .content .hotelMessageControl-container table .service {
+	width: 5%;
+	font-size: 18px;
+}
+
+.main .content .hotelMessageControl-container table input[type=radio] {
+	width: 20%;
+}
+
+.main .content .hotelMessageControl-container table select {
+	outline: none;
+	height: 38px;
+	line-height: 38px;
+	font-size: 18px;
+}
+
+.main .content .hotelMessageControl-container table .district,
+.main .content .hotelMessageControl-container table .type {
+	text-align: center;
+}
+
+.main .content .hotelMessageControl-container table input[type=time] {
+	width: 20%;
+	font-size: 18px;
+}
+
+.main .content .hotelMessageControl-container table .map {
+	padding: 10px 0;
+}
+
+.main .content .hotelMessageControl-container table .pc,
+.main .content .hotelMessageControl-container table .move {
+	width: 100px;
+}
+
+.main .content .hotelMessageControl-container table .move1,
+.main .content .hotelMessageControl-container table .move2 {
+	padding: 10px 5px;
+	overflow: hidden;
+}
+
+.main .content .hotelMessageControl-container table .move1 input,
+.main .content .hotelMessageControl-container table .move2 input,
+.main .content .hotelMessageControl-container table .move3 input {
+	width: 80%;
+	border: 1px solid #7D7D7D;
+	padding-left: 10px;
+}
+
+.main .content .hotelMessageControl-container table .move1 input[type=button],
+.main .content .hotelMessageControl-container table .move2 input[type=button],
+.main .content .hotelMessageControl-container table .move3-box input[type=button] {
+	margin: 10px 0;
+	width: 50%;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 8px;
+	background-color: transparent;
+	border: 1px solid #FB9F86;
+	color: #FB9F86;
+	cursor: pointer;
+	text-align: center;
+}
+
+.main .content .hotelMessageControl-container table .move1 .move1-p1,
+.main .content .hotelMessageControl-container table .move2 .move1-p2,
+.main .content .hotelMessageControl-container table .move3-box .move1-p3 {
+	text-align: left;
+	padding-left: 20px;
+	margin-bottom: 30px;
+}
+
+.main .content .hotelMessageControl-container table .move3-box {
+	margin-top: 10px;
+	position: relative;
+	width: 25%;
+}
+
+.main .content .hotelMessageControl-container table .move4-box {
+	margin-top: 10px;
+	position: relative;
+	width: 33%;
+	
+}
+
+.main .content .hotelMessageControl-container table .move3 .delete-img,
+.main .content .hotelMessageControl-container table .banquet-delete-img {
+	display: none;
+	color: #FB9F86;
+	position: absolute;
+	right: 8px;
+	top: -22px;
+	cursor: pointer;
+}
+
+.main .content .hotelMessageControl-container table .banquet-delete-img {
+	position: absolute;
+	right: 8px;
+	top: -22px;
+}
+
+.main .content .hotelMessageControl-container table .move3 .move3-operation {
+	float: right;
+	text-align: right;
+	padding-right: 20px;
+	margin-bottom: 10px;
+}
+
+.main .content .hotelMessageControl-container table .move3 .move3-operation button,
+.main .content .hotelMessageControl-container table .move-operation {
+	text-align: center;
+	display: inline-block;
+	background-color: #FB9F86;
+	border: none;
+	margin-right: 10px;
+	margin-top: 20px;
+	width: 100px;
+	border-radius: 7px;
+	height: 40px;
+	font-size: 18px;
+	color: #FFFFFF;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.main .content .hotelMessageControl-container input[type=submit] {
+	width: 100px;
+	background-color: #FB9F86;
+	border: none;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 7px;
+	margin-top: 50px;
+	font-size: 18px;
+	color: #FFFFFF;
+	outline: none;
+	margin-bottom: 50px;
+}
+/*.img img{
+	width: 100%;;
+	height: 100%;
+}*/
+
+/******* 酒店详情管理结束  ******/
+
+
+/******* 宴会厅详情管理开始  ******/
+
+.main .content .hotelMessageControl-container table .move1 .banquet-move-box {
+	width: 19.6%;
+	position: relative;
+}
+
+.main .content .hotelMessageControl-container table .taocan {
+	padding-left: 36px;
+	text-align: left;
+}
+
+.main .content .addTaocan,.deleteTaocan{
+	font-size: 28px;
+	cursor: pointer;
+}
+/******* 宴会厅详情管理结束  ******/
+
+

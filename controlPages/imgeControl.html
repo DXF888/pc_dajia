@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>大嫁网后台管理系统</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../logo.ico" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/cssControl/control.css" />
+	</head>
+
+	<body>
+		<!--main(主要内容)-->
+		<div class="main">
+			<!--内容-->
+			<div class="content imgeControl-content fl">
+				<h3>轮播图片管理</h3>
+				<div class="content-search">
+					<div class="content-search-box">
+						<input type="text" placeholder="点击搜索图片" />
+						<a href="javascript:;"><img src="../img/imgControl/sousuo.png" /></a>
+					</div>
+					<input type="checkbox" class="content-search-checkbox" />
+					<label for="checkbox">全选</label>
+					<a href="javascript:;" class="batchesDelete"><img src="../img/imgControl/piliangshanchu.png" /></a>
+					<input type="button" class="content-search-add" value="添加" />
+				</div>
+				<form action="">
+					<div class="content-container">
+						<div class="content-main-left fl">
+							<input class="fl" type="checkbox" id="" value="" />
+							<img src="../img/imgControl/tupian.png" />
+							<span class="content-main-left-sp1">图片名称</span><span class="content-main-left-sp2">图片大小</span>
+							<input type="text" placeholder="图片路径" />
+							<a href="javascript:;"><img src="../img/imgControl/xuanze.png" /></a>
+						</div>
+						<div class="content-main-right fl">
+							<p class="content-main-right-p1">
+								<a href="javascript:;">编辑</a>
+								<a href="javascript:;" class="delete-btn">删除</a>
+							</p>
+							<p>上传时间</p>
+							<input type="text" placeholder="链接地址" />
+						</div>
+
+					</div>
+					<input class="content-main-save" type="submit" value="保存" />
+				</form>
+			</div>
+		</div>
+
+		<script src="../lib/jQuery/jquery1.42.min.js"></script>
+		<script src="../lib/Template/template-native.js"></script>
+		<script type="../text/template" id="cortrolContent">
+			<% for(var i=0;i<4;i++) {%>
+			<div class="content-main">
+				<input class="fl content-main-checkbox" type="checkbox" id="" value="" />
+				<div class="content-main-left fl">
+					<img src="../img/imgControl/tupian.png" />
+					<span class="content-main-left-sp1"><%=name%></span><span class="content-main-left-sp2"><%=size%></span>
+					<input type="text" placeholder="图片路径" />
+					<input type="file" />
+				</div>
+				<div class="content-main-right fl">
+					<p class="content-main-right-p1">
+						<a href="javascript:;" class="delete-btn">
+							<%=det%>
+						</a>
+					</p>
+					<p>
+						<%=time%>
+					</p>
+					<input type="text" placeholder="链接地址" />
+				</div>
+			</div>
+			<% } %>
+		</script>
+		<script type="text/javascript">
+			var data = {
+				name: '图片名称',
+				size: '图片大小',
+				time: '上传时间',
+				det: '删除'
+			}
+			var contentMain = template("cortrolContent", data);
+			$('.content-container').html(contentMain);
+		</script>
+		<script src="../js/control.js"></script>
+		<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+		<script src="../js/imgesControl.js"></script>
+	</body>
+
+</html>

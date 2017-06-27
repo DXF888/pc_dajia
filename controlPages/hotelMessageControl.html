@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>大嫁网后台管理系统</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../img.ico" />
+		<link rel="stylesheet" href="../css/cssControl/jquery.Jcrop.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/cssControl/control.css" />
+	</head>
+
+	<body>
+		<!--main(主要内容)-->
+		<div class="main">
+			<!--内容-->
+			<div class="content hotelMessageControl-content fl">
+				<div class="hotelMessageControl-container">
+					<form id='form1'>
+						<table>
+							<caption>酒店详情管理</caption>
+							<tr>
+								<th>酒店名称</th>
+								<th colspan="3"><input type="text" name="BusinessName" /></th>
+							</tr>
+							<tr>
+								<th>酒店简介</th>
+								<th colspan="3"><input type="text" name="BusinessName" /></th>
+							</tr>
+							<tr>
+								<th class="district">区域</th>
+								<th>
+									<select class="area" name="District">
+										<option value="">请选择区域</option>
+										<option value="西湖区">西湖区</option>
+										<option value="下城区">下城区</option>
+										<option value="上城区">上城区</option>
+										<option value="江干区">江干区</option>
+										<option value="拱墅区">拱墅区</option>
+										<option value="滨江区">滨江区</option>
+										<option value="萧山区">萧山区</option>
+										<option value="余杭区">余杭区</option>
+									</select>
+								</th>
+								<th class="type">类型</th>
+								<th>
+									<select class="type-select" name="type">
+										<option value="">请选择类型</option>
+										<option value="六星级">六星级</option>
+										<option value="五星级">五星级</option>
+										<option value="四星级">四星级</option>
+										<option value="三星级">三星级</option>
+										<option value="农家乐">农家乐</option>
+									</select>
+								</th>
+							</tr>
+							<tr>
+								<th>地址</th>
+								<th colspan="3">
+									<select name="">
+										<option value="">浙江省</option>
+									</select>
+									<select name="">
+										<option value="">杭州市</option>
+									</select>
+									<select name="Address1">
+										<option value="">请选择区域</option>
+										<option value="西湖区">西湖区</option>
+										<option value="下城区">下城区</option>
+										<option value="上城区">上城区</option>
+										<option value="江干区">江干区</option>
+										<option value="拱墅区">拱墅区</option>
+										<option value="滨江区">滨江区</option>
+										<option value="萧山区">萧山区</option>
+										<option value="余杭区">余杭区</option>
+									</select>
+								</th>
+							</tr>
+							<tr>
+								<th>详细地址</th>
+								<th colspan="3"><input type="text" name="Address2" /></th>
+							</tr>
+							<tr>
+								<th>婚房</th>
+								<th>
+									<label><input name="IsMarriageRoom" type="radio" value="1" checked="checked" />有 </label>
+									<label><input name="IsMarriageRoom" type="radio" value="0" />无 </label>
+								</th>
+								<th>桌布颜色</th>
+								<th><input type="text" name="TableclothColor" /></th>
+							</tr>
+							<tr>
+								<th>开瓶费</th>
+								<th>
+									<label><input name="BottleOpeningFee" type="radio" value="1" checked="checked" />有 </label>
+									<label><input name="BottleOpeningFee" type="radio" value="0" />无 </label>
+								</th>
+								<th>价格区间</th>
+								<th><input type="text" name="PriceRange" /></th>
+							</tr>
+							<tr>
+								<th>自带酒水</th>
+								<th>
+									<label><input name="IsBringWine" type="radio" value="1" />可以</label>
+									<label><input name="IsBringWine" type="radio" value="0" checked="checked" />不可以</label>
+								</th>
+								<th>营业时间</th>
+								<th>
+									<input class="time" type="time" name="BusinessHours1" />—&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<input class="time" type="time" name="BusinessHours2" />
+								</th>
+							</tr>
+							<tr>
+								<th>最大桌数</th>
+								<th><input type="text" name="TableMax" /></th>
+								<th>停车位</th>
+								<th>
+									<label><input name="ParkingSpace" type="radio" value="1" checked="checked" />有</label>
+									<label><input name="ParkingSpace" type="radio" value="0" />无</label>
+								</th>
+							</tr>
+							<tr>
+								<th>服务费</th>
+								<th>
+									<label><input name="service" type="radio" value="1" checked="checked" />有</label>
+									<label><input name="service" type="radio" value="0" />无</label>
+								</th>
+								<td colspan="2">
+									<input class="service" type="text" />%
+								</td>
+							</tr>
+							<tr>
+								<th>草坪露台</th>
+								<th colspan="3">
+									<label><input name="LawnTerrace" type="radio" value="1" checked="checked" />有</label>
+									<label><input name="LawnTerrace" type="radio" value="0" />无</label>
+								</th>
+							</tr>
+							<tr>
+								<th>有无活动</th>
+								<th>
+									<label><input name="IsActivity" type="radio" value="1" checked="checked" />是</label>
+									<label><input name="IsActivity" type="radio" value="0" />否</label>
+								</th>
+								<th class="th1">是否推荐到首页-限时优惠</th>
+								<td>
+									<label><input name="recommend" type="radio" value="1" checked="checked" />是</label>
+									<label><input name="recommend" type="radio" value="0" />否</label>
+								</td>
+							</tr>
+							<tr>
+								<th>活动名称</th>
+								<th colspan="3"><input type="text" name="Activity" /></th>
+							</tr>
+							<tr>
+								<th>优惠活动</th>
+								<th colspan="3"><input type="text" /></th>
+							</tr>
+							<tr>
+								<th>到店礼内容</th>
+								<th colspan="3"><input type="text" name="Gifts" /></th>
+							</tr>
+							<tr>
+								<th>联系人</th>
+								<th><input type="text" name="Contacts" /></th>
+								<th>联系电话</th>
+								<th><input type="text" name="ContactsTel" /></th>
+							</tr>
+							<tr>
+								<th>地图</th>
+								<th colspan="3" class="map"><img src="../img/imgControl/tupian.png" /></th>
+							</tr>
+						</table>
+					</form>
+					<form action="">
+						<table>
+							<tr>
+								<th class="move move-uploading">移动端图片上传</th>
+								<th class="move1">
+									<p class="move1-p1">列表图片上传</p>
+									<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+									<p><input type="file" /></p>
+									<p><input type="text" placeholder="链接地址" /></p>
+								</th>
+								<th class="move2">
+									<p class="move1-p2">logo上传</p>
+									<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+									<p><input type="file" value="选择图片" name="AppDetailsSImg" /></p>
+									<p><input type="text" placeholder="链接地址" /></p>
+								</th>
+								<th class="move3 clearfix">
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file"></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="appshow2" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="appshow3" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="appshow3" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="appshow3" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="appshow3" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="appshow3" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="appshow3" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<p class="move3-operation"><span class="move-operation">编辑</span><button>批量上传</button></p>
+								</th>
+							</tr>
+						</table>
+					</form>
+					<form action="">
+						<table>
+							<tr>
+								<th class="pc move-uploading">PC端图片上传</th>
+								<th class="move1">
+									<p class="move1-p1">列表图片上传</p>
+									<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+									<p><input type="file" value="选择图片" name="webpic1" /></p>
+									<p><input type="text" placeholder="链接地址" /></p>
+								</th>
+								<th class="move2">
+									<p class="move1-p2">logo上传</p>
+									<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+									<p><input type="file" value="选择图片" name="webpic2" /></p>
+									<p><input type="text" placeholder="链接地址" /></p>
+								</th>
+								<th class="move3 clearfix">
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="webpic3" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="webpic3" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="webpic3" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="webpic3" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="webpic4" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="webpic5" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="webpic5" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="img" style="width: 172px;height: 166px; overflow: hidden;"><img class="img0" src="../img/imgControl/tupian.png" /></div>
+										<p><input type="file" value="选择图片" name="webpic5" /></p>
+										<p><input type="text" placeholder="链接地址" /></p>
+									</div>
+									<p class="fr move3-operation"><span class="move-operation">编辑</span><button>批量上传</button></p>
+								</th>
+							</tr>
+						</table>
+					</form>
+					<input type="submit" value="保存" onclick="confirm('确定提交信息吗？')?file_upload():false" />
+				<div class="imgTailor">
+					<div class="container">
+						<img src="../img/haiwai.png" id="target" alt="[Jcrop Example]" />
+						<div id="preview-pane">
+							<div class="preview-container">
+								<img src="../img/haiwai.png" class="jcrop-preview" alt="Preview" />
+							</div>
+						</div>
+					</div>
+					<button>保存</button>
+				</div>
+				</div>
+
+			</div>
+		</div>
+
+		<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+		<script src="../js/control.js"></script>
+		<script src="../js/hotelControl.js"></script>
+		<script src="../js/jquery.Jcrop.min.js"></script>
+		<script src="../js/imgTailor.js"></script>
+		<script type="text/javascript">
+			function file_upload() {
+				// var formData = new FormData($( "#form2" )[0]);
+				// $.ajax({
+				// 	// url: 'fileupload.php?typeId='+typeId+'' ,
+				// 	url: 'http://120.55.70.81:8088/dajiaserver/Admin/BusinessInfo/set_banquet_hall_appimg' ,
+				// 	type: 'POST',
+				// 	data: formData,//请求参数
+				// 	async: false,//不缓存
+				// 	cache: false,
+				// 	//是否用jq处理数据
+				// 	processData : false,
+				// 	//是否设置Content-Type请求头
+				// 	contentType : false,
+				// 	success: function (data){
+				// 		if(data != '1'){
+				// 			alert(data);
+				// 		}
+				// 	}
+				// });
+				// var formData = new FormData($( "#form3" )[0]);
+				// $.ajax({
+				// 	// url: 'fileupload.php?typeId='+typeId+'' ,
+				// 	url: 'http://120.55.70.81:8088/dajiaserver/Admin/BusinessInfo/set_banquet_hall_webimg' ,
+				// 	type: 'POST',
+				// 	data: formData,//请求参数
+				// 	async: false,//不缓存
+				// 	cache: false,
+				// 	//是否用jq处理数据
+				// 	processData : false,
+				// 	//是否设置Content-Type请求头
+				// 	contentType : false,
+				// 	success: function (data){
+				// 		if(data != '1'){
+				// 			alert(data);
+				// 		}
+				// 	}
+				// });
+				var formData = new FormData($("#form1")[0]);
+				$.ajax({
+					// url: 'fileupload.php?typeId='+typeId+'' ,
+					// url: 'http://120.55.70.81:8088/dajiaserver/Admin/BusinessInfo/set_banquet_hall' ,
+					url: 'http://local.dajiaweb.com/Admin/BusinessInfo/set_hotel_aimg',
+					type: 'POST',
+					data: formData, //请求参数
+					async: false, //不缓存
+					cache: false,
+					//是否用jq处理数据
+					processData: false,
+					//是否设置Content-Type请求头
+					contentType: false,
+					success: function(data) {
+						alert(data);
+					}
+				});
+			}
+		</script>
+	</body>
+
+</html>

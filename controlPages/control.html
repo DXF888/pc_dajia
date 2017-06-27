@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>大嫁网后台管理系统</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../logo.ico" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/cssControl/control.css" />
+		<script src="../lib/jQuery/jquery1.42.min.js"></script>
+		<script src="../js/control.js"></script>
+		<script>
+			//设置iframe的自适应高度
+			$(function() {
+				$("#iframeright").load(function() {
+					var mainheight = $(this).contents().find("body").height() + 300;
+					$(this).height(mainheight);
+				});
+			});
+			//设置左边导航要跳转的页面
+			function loadMenu(url) {
+				right.location.href = url;
+			};
+		</script>
+	</head>
+
+	<body>
+		<!--header(头部开始)-->
+		<header id="header">
+			<div class="logo fl">
+				<a href="javascript:;"><img src="../img/imgControl/logo.png" /></a>
+			</div>
+			<div class="welcome fr">
+				<span>您好，用户名！</span>
+				<span>大嫁网后台管理系统欢迎您！</span>
+				<a href="login.html" class="quit">退出</a>
+			</div>
+		</header>
+		<!--header(头部结束)-->
+
+		<!--main(主要内容)-->
+		<div class="main">
+			<!--左边导航菜单-->
+			<div class="navMenu fl">
+				<ul class="nav-ul">
+					<li class="subnav">
+						<a href="javascript:;">首页内容 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">图片管理</a>
+								<ul class="submenu">
+									<li>
+										<a href="imgeControl.html" name="imgeControl.html" target="right" onclick="loadMenu('imgeControl.html')">轮播图片管理</a>
+									</li>
+									<li>
+										<a href="imgeControl.html" name="imgeControl.html" target="right">推荐图片管理</a>
+									</li>
+									<li>
+										<a href="imgeControl.html" name="imgeControl.html" target="right">广告图片管理</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="javascript:;">推荐管理</a>
+								<ul class="submenu">
+									<li>
+										<a href="recommendControl.html" name="recommendControl.html" target="right" onclick="loadMenu('recommendControl.html')">精品推荐</a>
+									</li>
+									<li>
+										<a href="javascript:;">婚宴酒店推荐</a>
+									</li>
+									<li>
+										<a href="javascript:;">婚纱摄影推荐</a>
+									</li>
+									<li>
+										<a href="javascript:;">四大金刚推荐</a>
+									</li>
+									<li>
+										<a href="javascript:;">婚庆公司推荐</a>
+									</li>
+									<li>
+										<a href="javascript:;">婚礼甜点推荐</a>
+									</li>
+									<li>
+										<a href="javascript:;">婚车预定推荐</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="javascript:;">其他管理</a>
+								<ul class="submenu">
+									<li>
+										<a href="javascript:;">限时优惠</a>
+									</li>
+									<li>
+										<a href="javascript:;">优惠券</a>
+									</li>
+									<li>
+										<a href="javascript:;">婚礼贴士</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="subnav">
+						<a href="javascript:;">关于我们 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">大嫁网简介</a>
+							</li>
+							<li>
+								<a href="javascript:;">大事件</a>
+							</li>
+							<li>
+								<a href="javascript:;">加入我们</a>
+							</li>
+							<li>
+								<a href="javascript:;">联系大嫁网</a>
+							</li>
+						</ul>
+					</li>
+					<li class="subnav">
+						<a href="javascript:;">幸福咨询 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">婚宴酒店</a>
+							</li>
+							<li>
+								<a href="javascript:;">婚礼摄影</a>
+							</li>
+							<li>
+								<a href="javascript:;">婚纱礼服</a>
+							</li>
+							<li>
+								<a href="javascript:;">司仪</a>
+							</li>
+							<li>
+								<a href="javascript:;">摄影</a>
+							</li>
+							<li>
+								<a href="javascript:;">化妆</a>
+							</li>
+							<li>
+								<a href="javascript:;">婚庆公司</a>
+							</li>
+							<li>
+								<a href="javascript:;">婚礼甜点</a>
+							</li>
+							<li>
+								<a href="javascript:;">婚车预定</a>
+							</li>
+						</ul>
+					</li>
+					<li class="subnav">
+						<a href="javascript:;">时尚新闻 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">婚庆头条</a>
+							</li>
+						</ul>
+					</li>
+					<li class="subnav">
+						<a href="javascript:;">客户说 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">婚礼圈</a>
+							</li>
+						</ul>
+					</li>
+					<li class="subnav">
+						<a href="javascript:;">帮助中心 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">贴心助手</a>
+								<ul class="submenu">
+									<li>
+										<a href="javascript:;">在线客服</a>
+									</li>
+									<li>
+										<a href="javascript:;">密码找回</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="javascript:;">新手上路</a>
+								<ul class="submenu">
+									<li>
+										<a href="javascript:;">如何订制婚礼</a>
+									</li>
+									<li>
+										<a href="javascript:;">蜜月出行</a>
+									</li>
+									<li>
+										<a href="javascript:;">海外婚礼</a>
+									</li>
+									<li>
+										<a href="javascript:;">如何注册</a>
+									</li>
+									<li>
+										<a href="javascript:;">如何登陆</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a haref="javascript:;">公司信息</a>
+								<ul class="submenu">
+									<li>
+										<a href="javascript:;">隐私申明</a>
+									</li>
+									<li>
+										<a href="javascript:;">用户协议</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="subnav">
+						<a href="javascript:;">婚礼学堂 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">婚礼攻略</a>
+							</li>
+							<li>
+								<a href="javascript:;">签到领奖</a>
+							</li>
+						</ul>
+					</li>
+					<li class="subnav">
+						<a href="javascript:;">用户管理 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">婚礼攻略</a>
+							</li>
+							<li>
+								<a href="javascript:;">签到领奖</a>
+							</li>
+						</ul>
+					</li>
+					<li class="subnav">
+						<a href="javascript:;">商铺信息 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">商铺管理</a>
+								<ul class="submenu">
+									<li>
+										<a href="hotelControl.html" name="hotelControl.html" target="right" onclick="loadMenu('hotelControl.html')">酒店</a>
+									</li>
+									<li>
+										<a href="javascript:;">婚纱摄影</a>
+									</li>
+									<li>
+										<a href="javascript:;">婚纱礼服</a>
+									</li>
+									<li>
+										<a href="javascript:;">司仪</a>
+									</li>
+									<li>
+										<a href="javascript:;">摄影</a>
+									</li>
+									<li>
+										<a href="javascript:;">化妆</a>
+									</li>
+									<li>
+										<a href="javascript:;">摄影</a>
+									</li>
+									<li>
+										<a href="javascript:;">演员</a>
+									</li>
+									<li>
+										<a href="javascript:;">婚车</a>
+									</li>
+									<li>
+										<a href="javascript:;">信息管理</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="javascript:;">信息管理</a>
+								<ul class="submenu">
+									<li>
+										<a href="javascript:;">评价管理</a>
+									</li>
+									<li>
+										<a href="javascript:;">预约管理</a>
+									</li>
+									<li>
+										<a href="javascript:;">海外婚礼订单</a>
+									</li>
+									<li>
+										<a href="javascript:;">蜜月订单</a>
+									</li>
+									<li>
+										<a href="javascript:;">佣金申请</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="subnav">
+						<a href="javascript:;">返金管理 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">返金管理</a>
+							</li>
+						</ul>
+					</li>
+					<li class="subnav">
+						<a href="javascript:;">购物车 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">购物车管理</a>
+							</li>
+						</ul>
+					</li>
+					<li class="subnav">
+						<a href="javascript:;">收藏夹 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">收藏夹管理</a>
+							</li>
+						</ul>
+					</li>
+					<li class="subnav">
+						<a href="javascript:;">订单管理 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">订单管理</a>
+							</li>
+						</ul>
+					</li>
+					<li class="subnav">
+						<a href="javascript:;">账号管理 <img src="../img/imgControl/xiala.png" /> </a>
+						<ul>
+							<li>
+								<a href="javascript:;">账号管理</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!--内容-->
+			<div class="content fl">
+				<div class="content-header">
+				</div>
+				<iframe name="right" id="iframeright" src='' frameborder="0" width="100%" scrolling="yes"></iframe>
+			</div>
+		</div>
+
+	</body>
+
+</html>
