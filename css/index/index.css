@@ -666,3 +666,74 @@
 
 
 /*分页结束*/
+
+/*酒店详情开始*/
+#headline,#intro{
+	position: relative;
+	border-bottom: 1px solid #7B7B7B;
+	padding-bottom: 2%;
+}
+
+#headline .hotel-logo img{
+	width: 80%;
+	margin-top: -50%;
+}
+#headline .headline-wenzi{
+	width: 50%;
+	margin-top: 1%;
+}
+#headline .headline-button{
+	margin-top: 1%;
+}
+#headline .headline-wenzi .price,#headline .headline-wenzi h3{
+	display: inline-block;
+	
+}
+#headline .headline-wenzi .price{
+	margin-left: 6%;
+	font-size: 30px;
+	color: #7b7b7b;
+}
+#headline .headline-wenzi .site{
+	margin-top: 10%;
+	font-size: 18px;
+	color: #7B7B7B;
+}
+#headline .headline-button a{
+	display: inline-block;
+	font-size: 26px;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #f05053;
+	padding: 10px;
+	border-radius: 8px;
+}
+#headline h3,#intro .ban_c--80 > h3,#banquet .ban_c--80 > h3{
+	font-size: 36px;
+	color: #f05053;
+}
+#intro{
+	padding: 2% 0;
+}
+#intro .intro-particulars{
+	color: #7B7B7B;
+	font-size: 24px;
+	padding-top: 3%;
+}
+#banquet h3{
+	padding: 3% 0;
+	
+}
+#banquet ul li{
+	float: left;
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 2%;
+}
+#banquet ul li:nth-child(2n){
+	margin-right:0;
+}
+#banquet ul li img{
+	width: 100%;
+}
+/*酒店详情结束*/

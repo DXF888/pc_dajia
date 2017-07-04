@@ -2,7 +2,7 @@
 (function() {
 	//轮播图
 	function carousel() {
-		jQuery(".slideBox").slide({ mainCell: ".bd ul", autoPlay: true });
+		$(".slideBox").slide({ mainCell: ".bd ul", autoPlay: true });
 	};
 	carousel();
 
@@ -29,15 +29,15 @@
 	$('#return').click(function() {
 		$(document.body).animate({ scrollTop: 0 }, 800);
 	});
-	console.log(11);
 	//搜索栏的放大镜，放上去显示框，离开隐藏
 	$('.search-bar').mouseover(function() {
-		$(this).parent().css('border', '1px solid red');
+		$(this).css('border', '1px solid red');
+		$(this).children('input').show().focus().select();;
 //		console.log($(this).prev());
-		$(this).prev().show();
+//		$('.search-bar').show();
 	});
-	$('..search-bar').mouseout(function() {
-		$(this).parent().css('border', 'none');
-		$(this).prev().hide();
+	$('.search-bar').mouseout(function() {
+		$(this).css('border', 'none');
+		$(this).children('input').hide();
 	})
 })()

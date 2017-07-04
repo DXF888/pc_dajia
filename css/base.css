@@ -118,7 +118,10 @@ img{
 	width: 96%;
 	margin: 0 auto;
 }
-
+.ban_c--80 {
+	width: 80%;
+	margin: 0 auto;
+}
 .fl {
 	float: left;
 }
