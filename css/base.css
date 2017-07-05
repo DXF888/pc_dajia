@@ -52,7 +52,9 @@ h5,
 h6 {
     font-size: 14px
 }
-
+body{
+	min-width: 1366px;
+}
 body,
 input,
 select,

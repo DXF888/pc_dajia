@@ -1,11 +1,5 @@
-/*banner*/
-(function() {
-	//轮播图
-	function carousel() {
-		$(".slideBox").slide({ mainCell: ".bd ul", autoPlay: true });
-	};
-	carousel();
 
+(function() {
 	/*返回顶部*/
 	$(window).scroll(function() {
 		if($(window).scrollTop() > 0) {
