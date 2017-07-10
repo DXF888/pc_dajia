@@ -1,5 +1,7 @@
 /*返回顶部*/
-
+body{
+	min-width: 1366px;
+}
 #return {
 	position: fixed;
 	left: 10px;

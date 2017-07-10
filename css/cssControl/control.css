@@ -945,13 +945,15 @@ tr {
 	margin-bottom: 50px;
 }
 
-
-/*.img img{
-	width: 100%;;
-	height: 100%;
-}*/
-
-
+/*上传图片样式*/
+.am-circle{
+	border-radius: 0;
+	width: 172px;
+	height: 166px;
+}
+img {
+   max-width：100%;
+}
 /******* 酒店详情管理结束  ******/
 
 
@@ -969,7 +971,7 @@ tr {
 
 .main .content .addTaocan,
 .deleteTaocan {
-	font-size: 28px;
+	font-size: 26px;
 	cursor: pointer;
 }
 
@@ -1017,3 +1019,14 @@ tr {
 	z-index: 10;
 }
 /******* 宴会厅详情管理结束  ******/
+
+
+/********* 司仪开始 **************/
+textarea { 
+	resize : none; 
+	border: none;
+	outline: none;
+	padding: 10px 5px 5px 5px;
+	font-size: 18px;
+}
+/********* 司仪结束 **************/
