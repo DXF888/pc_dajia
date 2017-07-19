@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>大嫁网后台管理系统</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../logo.ico" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/cssControl/control.css" />
+	</head>
+
+	<body>
+		<!--main(主要内容)-->
+		<div class="main">
+			<!--内容-->
+			<div class="content hotel-main-content fl">
+				<div class="content-search hotel-content-search">
+					<div class="content-search-box fl">
+						<input type="text" placeholder="输入酒店ID或关键字查找" />
+						<a href="javascript:;"><img src="../img/imgControl/sousuo.png" /></a>
+					</div>
+					<div class="btns fr">
+						<a class="combo-compile hotel-content-search-a1" href="shootMessage.html" name="shootMessage.html" target="right">添加</a>
+						<button class="hotel-content-search-button1">全选</button>
+						<button class="hotel-content-search-button1">批量删除</button>
+					</div>
+				</div>
+				<div class="shopMessageControl-container clearfix">
+					<div class="shopMessageControl-content-top">
+						<div class="shopMessageControl-content-right hotel-right-control hotel-right1-control">
+							<form>
+								<table>
+									<input class="fl" type="checkbox" id="" value="" />
+									<tr>
+										<td>摄像姓名</td>
+										<td>区域</td>
+										<td>是否推荐</td>
+										<td>是否置顶</td>
+										<td>其他操作</td>
+									</tr>
+									<tr>
+										<td>摄像姓名</td>
+										<td>**区</td>
+										<td>是</td>
+										<td>是</td>
+										<td class="shopMessageControl-content-right-td1">
+											<a class="combo-compile" href="shootExampleListControl.html" name="shootExampleListControl.html" target="right">视频</a>
+											<a class="combo-compile" href="shootComboListControl.html" name="shootComboListControl.html" target="right">套餐</a>
+											<a class="combo-compile" href="shootMessage.html" name="shootMessage.html" target="right">编辑</a>
+											<button>删除</button>
+										</td>
+									</tr>
+								</table>
+							</form>
+							<ul class="shopMessageControl-content-right-operation fr">
+								<li>
+									<a href="javascript:;">设为置顶</a>
+								</li>
+								<li>
+									<a href="javascript:;">取消置顶</a>
+								</li>
+								<li>
+									<a href="javascript:;">首页置顶</a>
+								</li>
+								<li>
+									<a href="javascript:;">取消首页置顶</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+		<script src="../js/hotelControl.js"></script>
+		<script src="../js/control.js"></script>
+	</body>
+
+</html>

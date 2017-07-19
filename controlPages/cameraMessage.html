@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<title>大嫁网后台管理系统</title>
 		<link rel="shortcut icon" type="image/x-icon" href="../img.ico" />
+		<link rel="stylesheet" href="../css/cssControl/jquery.Jcrop.min.css" />
 		<link rel="stylesheet" type="text/css" href="../lib/uploadImg/css/font-awesome.4.6.0.css">
 		<link rel="stylesheet" href="../lib/uploadImg/css/amazeui.min.css">
 		<link rel="stylesheet" href="../../uploading/uploading2/cropper.css">
@@ -18,48 +19,78 @@
 		<div class="main">
 			<!--内容-->
 			<div class="content hotelMessageControl-content fl">
+
 				<div class="hotelMessageControl-container">
 					<form id='form1'>
 						<table>
-							<caption>司仪套餐详情管理</caption>
+							<caption>摄像首页详情管理</caption>
 							<tr>
-								<th>套餐名称</th>
-								<th class="taocan"><input type="text" /></th>
-								<th>是否推荐</th>
-								<th class="taocan">
-									是<input type="radio" name="tuijian"/>
-									否<input type="radio" name="tuijian"/>
+								<th>团队名称</th>
+								<th><input type="text" name="BusinessName" /></th>
+								<th class="district">区域</th>
+								<th>
+									<select class="area" name="District">
+										<option value="">请选择区域</option>
+										<option value="西湖区">西湖区</option>
+										<option value="下城区">下城区</option>
+										<option value="上城区">上城区</option>
+										<option value="江干区">江干区</option>
+										<option value="拱墅区">拱墅区</option>
+										<option value="滨江区">滨江区</option>
+										<option value="萧山区">萧山区</option>
+										<option value="余杭区">余杭区</option>
+									</select>
 								</th>
 							</tr>
 							<tr>
-								<th>套餐简介</th>
+								<th>简介</th>
 								<th colspan="3" class="taocan"><textarea name="" rows="6" cols="80"></textarea></th>
 							</tr>
+							
 							<tr>
-								<th>司仪姓名</th>
-								<th><input type="text" /></th>
-								<th>出生地</th>
-								<th><input type="text" /></th>
-							</tr>
-							<tr>
-								<th>出生年月</th>
-								<th><input type="data" /></th>
-								<th>风格</th>
-								<th><input type="text" /></th>
-							</tr>
-							<tr>
-								<th>才艺</th>
-								<th colspan="3"><input type="text" /></th>
-							</tr>
-							<tr>
-								<th>团队构成</th>
-								<th colspan="3"><input type="text" /></th>
-							</tr>
-							<tr>
-								<th class="move">移动端图片上传</th>
-								<th class="move1 move3 clearfix" colspan="3">
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
+								<th class="move move-uploading">移动端图片上传</th>
+								<th class="move1">
+									<p class="move1-p1">列表图片上传</p>
+									<div class="up-img-cover up-img-touch3">
+										<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										<span style="display: none;width: 620px;height: 392px;">1</span>
+									</div>
+
+									<div>
+										<a style="text-align: center; display: block;" id="pic"></a>
+									</div>
+
+									<input type="text" placeholder="链接地址" />
+								</th>
+								<th class="move2">
+									<p class="move1-p2">logo上传</p>
+									<div class="up-img-cover up-img-touch2">
+										<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										
+									</div>
+
+									<div>
+										<a style="text-align: center; display: block;" id="pic"></a>
+									</div>
+
+									<p><input type="text" placeholder="链接地址" /></p>
+								</th>
+								<th class="move3 clearfix">
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch4">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+											<span style="display: none;">1.56</span>
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
 										<div class="up-img-cover up-img-touch4">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
@@ -67,10 +98,10 @@
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
 										<div class="up-img-cover up-img-touch4">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
@@ -78,10 +109,10 @@
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
 										<div class="up-img-cover up-img-touch4">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
@@ -89,10 +120,10 @@
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
 										<div class="up-img-cover up-img-touch4">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
@@ -100,10 +131,10 @@
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
 										<div class="up-img-cover up-img-touch4">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
@@ -111,10 +142,10 @@
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
 										<div class="up-img-cover up-img-touch4">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
@@ -122,10 +153,10 @@
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
 										<div class="up-img-cover up-img-touch4">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
@@ -133,164 +164,134 @@
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
-										<div class="up-img-cover up-img-touch4">
-											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
-										</div>
-
-										<div>
-											<a style="text-align: center; display: block;" id="pic"></a>
-										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
-									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
-										<div class="up-img-cover up-img-touch4">
-											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
-										</div>
-
-										<div>
-											<a style="text-align: center; display: block;" id="pic"></a>
-										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
-									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
-										<div class="up-img-cover up-img-touch4">
-											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
-										</div>
-
-										<div>
-											<a style="text-align: center; display: block;" id="pic"></a>
-										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
-									</div>
-									<p class="move3-operation clearfix"><span class="move-operation">编辑</span><button>批量上传</button></p>
+									<p class="move3-operation"><span class="move-operation">编辑</span><button>批量上传</button></p>
 								</th>
 							</tr>
 							<tr>
-								<th class="pc">PC端图片上传</th>
-								<th class="move1 move3 clearfix" colspan="3">
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
-										<div class="up-img-cover up-img-touch">
+								<th class="move move-uploading">pc端图片上传</th>
+								<th class="move1">
+									<p class="move1-p1">列表图片上传</p>
+									<div class="up-img-cover up-img-touch">
+										<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+									</div>
+
+									<div>
+										<a style="text-align: center; display: block;" id="pic"></a>
+									</div>
+
+									<input type="text" placeholder="链接地址" />
+								</th>
+								<th class="move2">
+									<p class="move1-p2">logo上传</p>
+									<div class="up-img-cover up-img-touch2">
+										<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+									</div>
+
+									<div>
+										<a style="text-align: center; display: block;" id="pic"></a>
+									</div>
+
+									<p><input type="text" placeholder="链接地址" /></p>
+								</th>
+								<th class="move3 clearfix">
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
 
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
-										<div class="up-img-cover up-img-touch">
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
 
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
-										<div class="up-img-cover up-img-touch">
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
 
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
-										<div class="up-img-cover up-img-touch">
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
 
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
-										<div class="up-img-cover up-img-touch">
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
 
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
-										<div class="up-img-cover up-img-touch">
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
 
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
-										<div class="up-img-cover up-img-touch">
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
 
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
-										<div class="up-img-cover up-img-touch">
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
 											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
 										</div>
 
 										<div>
 											<a style="text-align: center; display: block;" id="pic"></a>
 										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
+										<input type="text" placeholder="链接地址" />
 									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
-										<div class="up-img-cover up-img-touch">
-											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
-										</div>
-
-										<div>
-											<a style="text-align: center; display: block;" id="pic"></a>
-										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
-									</div>
-									<div class="banquet-move-box fl">
-										<span class="banquet-delete-img">x</span>
-										<div class="up-img-cover up-img-touch">
-											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
-										</div>
-
-										<div>
-											<a style="text-align: center; display: block;" id="pic"></a>
-										</div>
-										<p><input type="text" placeholder="链接地址" /></p>
-									</div>
-									<p class="move3-operation clearfix"><span class="move-operation">编辑</span><button>批量上传</button></p>
+									<p class="move3-operation"><span class="move-operation">编辑</span><button>批量上传</button></p>
 								</th>
 							</tr>
-						
 						</table>
-					<input type="submit" value="保存" onclick="confirm('确定提交信息吗？')?file_upload():false" />
 					</form>
+					<input type="submit" value="保存" onclick="confirm('确定提交信息吗？')?file_upload():false" />
+
 					<!--图片上传框-->
 					<div class="am-modal am-modal-no-btn up-frame-bj " tabindex="-1" id="doc-modal-1">
 						<div class="am-modal-dialog up-frame-parent up-frame-radius">
@@ -319,7 +320,7 @@
 									<div class="up-control-btns">
 										<span class="am-icon-rotate-left" onclick="rotateimgleft()"></span>
 										<span class="am-icon-rotate-right" onclick="rotateimgright()"></span>
-										<span class="am-icon-check" id="up-btn-ok" url="http://120.55.70.81:8088/dajiaserver/Admin/BusinessInfo/set_emcee_package_img"></span>
+										<span class="am-icon-check" id="up-btn-ok" url="http://120.55.70.81:8088/dajiaserver/Admin/BusinessInfo/set_hotel_info"></span>
 									</div>
 								</div>
 
@@ -361,63 +362,6 @@
 		<script src="../lib/uploadImg/js/amazeui.min.js" charset="utf-8"></script>
 		<script src="../lib/uploadImg/js/cropper.min.js" charset="utf-8"></script>
 		<script src="../lib/uploadImg/js/custom_up_img.js" charset="utf-8"></script>
-		<script type="text/javascript">
-			function file_upload() {
-				// var formData = new FormData($( "#form2" )[0]);
-				// $.ajax({
-				// 	// url: 'fileupload.php?typeId='+typeId+'' ,
-				// 	url: 'http://120.55.70.81:8088/dajiaserver/Admin/BusinessInfo/set_banquet_hall_appimg' ,
-				// 	type: 'POST',
-				// 	data: formData,//请求参数
-				// 	async: false,//不缓存
-				// 	cache: false,
-				// 	//是否用jq处理数据
-				// 	processData : false,
-				// 	//是否设置Content-Type请求头
-				// 	contentType : false,
-				// 	success: function (data){
-				// 		if(data != '1'){
-				// 			alert(data);
-				// 		}
-				// 	}
-				// });
-				// var formData = new FormData($( "#form3" )[0]);
-				// $.ajax({
-				// 	// url: 'fileupload.php?typeId='+typeId+'' ,
-				// 	url: 'http://120.55.70.81:8088/dajiaserver/Admin/BusinessInfo/set_banquet_hall_webimg' ,
-				// 	type: 'POST',
-				// 	data: formData,//请求参数
-				// 	async: false,//不缓存
-				// 	cache: false,
-				// 	//是否用jq处理数据
-				// 	processData : false,
-				// 	//是否设置Content-Type请求头
-				// 	contentType : false,
-				// 	success: function (data){
-				// 		if(data != '1'){
-				// 			alert(data);
-				// 		}
-				// 	}
-				// });
-				var formData = new FormData($("#form1")[0]);
-				$.ajax({
-					// url: 'fileupload.php?typeId='+typeId+'' ,
-					// url: 'http://120.55.70.81:8088/dajiaserver/Admin/BusinessInfo/set_banquet_hall' ,
-					url: 'http://local.dajiaweb.com/Admin/BusinessInfo/set_hotel_aimg',
-					type: 'POST',
-					data: formData, //请求参数
-					async: false, //不缓存
-					cache: false,
-					//是否用jq处理数据
-					processData: false,
-					//是否设置Content-Type请求头
-					contentType: false,
-					success: function(data) {
-						alert(data);
-					}
-				});
-			}
-		</script>
 	</body>
 
 </html>
