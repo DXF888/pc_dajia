@@ -205,56 +205,39 @@
 		<script src="lib/jQuery/jquery-3.2.1.min.js"></script>
 		<script src="lib/Template/template-native.js"></script>
 		<script type="text/template" id="template">
-			<% for(var i = 0 ;i < 6;i++) { %>
 			<div class="ban_c clearfix">
 				<ul>
-					<li>
-						<a href="#"><img class="hotel-ul1-img" src="img/santaishanzhuang.png" />
-							<p>
-								<%=title%>
-							</p>
-							<p><span><img src="img/liulan.png"/><%=price%></span>|<span><%=start%></span></p>
-						</a>
-					</li>
-					<li>
-						<a href="#"><img class="hotel-ul1-img" src="img/santaishanzhuang.png" />
-							<p>
-								<%=title%>
-							</p>
-							<p><span><img src="img/liulan.png"/><%=price%></span>|<span><%=start%></span></p>
-						</a>
-					</li>
-					<li>
-						<a href="#"><img class="hotel-ul1-img" src="img/santaishanzhuang.png" />
-							<p>
-								<%=title%>
-							</p>
-							<p><span><img src="img/liulan.png"/><%=price%></span>|<span><%=start%></span></p>
-						</a>
-					</li>
-					<li>
-						<a href="#"><img class="hotel-ul1-img" src="img/santaishanzhuang.png" />
-							<p>
-								<%=title%>
-							</p>
-							<p><span><img src="img/liulan.png"/><%=price%></span>|<span><%=start%></span></p>
-						</a>
-					</li>
+				<% for(var i = 0 ;i < response.length;i++) { %>
+						<li>
+							<a href="#"><img class="hotel-ul1-img" src='http://120.55.70.81:8088/dajiaserver/<%=response[i].listimg%>' />
+								<p>
+									<%=response[i].businessname%>
+								</p>
+								<p><span><img src="img/liulan.png"/><%=response[i].visit%></span>|<span><%=response[i].visit%></span></p>
+							</a>
+						</li>
+				<% } %>
 				</ul>
 			</div>
-			<% } %>
-		</script>
-		<script type="text/javascript">
-			var data = {
-				title: '杭州三台山庄',
-				price: 117,
-				start: '四星级'
-			};
-			var hotelHtml = template("template", data);
-			$('#hotel').html(hotelHtml);
 		</script>
 		<script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script src="js/index.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$.ajax({
+				type:"post",
+				url:"http://120.55.70.81:8088/dajiaserver/Rest/shop/get_hotel_list",
+				datatype:'json',
+				async:true,
+				success:function(data){
+//					console.log(data);
+//					console.log(data.response[0].listimg);
+					var hotelHtml = template("template", data);
+					$('#hotel').html(hotelHtml);
+				}
+			});
+			});
+		</script>
 	</body>
 
 </html>
