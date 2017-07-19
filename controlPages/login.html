@@ -18,14 +18,9 @@
 					<div class="username"><label for="username">用户名 : </label><input type="text" id="username" /></div>
 					<div class="password"><label for="password">密码：</label><input type="text" id="password" /></div>
 					<div class="code clearfix">
-						<div class="code-input fl">
-							<label for="code">验证码：</label>
-							<input type="text" id="code" />
-						</div>
-						<div class="code-number fl">
-							<a class="code-a1" href="#"><img src="../img/imgControl/login/yanzhengma.png" /></a><span>看不清，</span>
-							<a href="#">换一张</a>
-						</div>
+						<div class="fl"><label for="code_input">验证码：</label><input type="text" id="code_input" value="" /></div>
+						<div class="fl" id="v_container" style="height: 50px;"></div>
+						<span class="huantu">看不清，换一张</span>
 					</div>
 					<div class="subit">
 						<a id="subit" href="javascript:;"><img src="../img/denglu.png" /></a>
@@ -35,6 +30,7 @@
 			<p class="reference">copyright @2006-2015 大嫁网婚礼会所 户ICP备0604456720 沪ICP证 B2-20130044 上海市公安局宝山分局 备案编号31456789</p>
 		</div>
 		<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+		<script src="../lib/Captcha/Captcha.js"></script>
 		<script src="../js/login.js"></script>
 	</body>
 </html>

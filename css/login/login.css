@@ -56,6 +56,20 @@ h2{
 	outline:0px;
 	color: #242424;
 }
+.login #code_input{
+	height: 50px;
+	width: 120px;
+    margin-right: 10px;
+}
+.login .huantu{
+	font-size: 24px;
+	vertical-align: bottom;
+	cursor: pointer;
+	color: #0B6FA2;
+	position: relative;
+	top: 14px;
+	left: 5px;
+}
 .login .username,.password{
 	margin-bottom: 46px;
 }
@@ -92,5 +106,9 @@ h2{
 .container .reference{
 	margin-top: 33px;
 	margin-bottom: 2%;
+}
+#subit{
+	display: block;
+	height: 56px;
 }
 /*登录页面结束*/
