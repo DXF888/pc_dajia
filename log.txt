@@ -1,0 +1,53 @@
+commit 86dbfeec28bc04f07ef58de7d669d6a62acc13e8
+Author: 戴勋发 <252544724@qq.com>
+Date:   Wed Jul 19 17:55:11 2017 +0800
+
+    摄像页面完成
+
+commit 407f119c1556893ed957cb546a996a263a88747a
+Author: 戴勋发 <252544724@qq.com>
+Date:   Wed Jul 19 17:25:36 2017 +0800
+
+    摄像页面完成
+
+commit 791154900a348f06f1fb387ffaa353b32dea7e36
+Author: 戴勋发 <252544724@qq.com>
+Date:   Wed Jul 19 16:38:52 2017 +0800
+
+    登录验证码改造成功
+
+commit d214e1bfd5d457d1c41aa595532507e3c2cffa48
+Author: 戴勋发 <252544724@qq.com>
+Date:   Wed Jul 19 11:20:43 2017 +0800
+
+    摄影后台管理页面完成
+
+commit 0f6185b0444bb87990f73232bd3bac336b63f147
+Author: 戴勋发 <252544724@qq.com>
+Date:   Wed Jul 19 10:27:26 2017 +0800
+
+    图片上传功能修改完毕
+
+commit 9b7b990b98dd9663e996246286f80e8703682c10
+Author: 戴勋发 <252544724@qq.com>
+Date:   Mon Jul 10 16:17:03 2017 +0800
+
+    图片上传完毕
+
+commit e766732f077d52c9d58dd0e778100101a39206af
+Author: 戴勋发 <252544724@qq.com>
+Date:   Wed Jul 5 15:09:30 2017 +0800
+
+    Bootstrap改造
+
+commit 353ddc5152336e107f2e0132835167c4200cc19b
+Author: 戴勋发 <252544724@qq.com>
+Date:   Tue Jul 4 09:43:05 2017 +0800
+
+    酒店详情页完成
+
+commit 3ac287628724c42426dc5a8c45660ee8750e4c79
+Author: 戴勋发 <252544724@qq.com>
+Date:   Tue Jun 27 10:29:34 2017 +0800
+
+    酒店管理资料上传完成
