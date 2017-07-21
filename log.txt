@@ -1,3 +1,9 @@
+commit 9a892ce33aaea7dddb4f0458ad3c856128984400
+Author: 戴勋发 <252544724@qq.com>
+Date:   Thu Jul 20 10:14:29 2017 +0800
+
+    演员页面完成
+
 commit 86dbfeec28bc04f07ef58de7d669d6a62acc13e8
 Author: 戴勋发 <252544724@qq.com>
 Date:   Wed Jul 19 17:55:11 2017 +0800
