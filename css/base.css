@@ -2,6 +2,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 html,
 body,
@@ -71,11 +72,6 @@ cite {
     font-style: normal
 }
 
-body {
-    background: #fff;
-    line-height: 1.2
-}
-
 a,
 a:link {
     text-decoration: none
@@ -90,35 +86,25 @@ a:focus {
     outline: none
 }
 
-.fixed:after {
-    content: ".";
-    display: block;
-    clear: both;
-    height: 0;
-    visibility: hidden
-}
 ul ,ol{
 	list-style: none;
 }
 body {
-	/*height: 88888px;*/
 	background: #fff;
 	font-size: 62.5%;
 	font-family: "微软雅黑";
+	min-width: 1366px;
 }
 a {
 	text-decoration: none;
 	color: #FF6666;
+	cursor: pointer;
 }
 img{
 	border: none;
 }
 .ban_c {
-	width: 96%;
-	margin: 0 auto;
-}
-.ban_c--80 {
-	width: 80%;
+	width: 86%;
 	margin: 0 auto;
 }
 .fl {
@@ -139,4 +125,7 @@ img{
 
 .clearfix {
 	*zoom: 1;
+}
+.ban_c-100{
+	padding: 0 100px;
 }

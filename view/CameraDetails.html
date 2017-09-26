@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>大嫁网</title>
+		<link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="../logo.ico" />
+		<link rel="stylesheet" href="../css/hover-min.css" />
+		<link rel="stylesheet" href="../lib/slider/pgwslideshow.css" />
+		<link rel="stylesheet" type="text/less" href="../css/index/weddingPhotography.less" />
+	</head>
+
+	<body>
+		<!--屏障-->
+		<div class="pingzhang"></div>
+		<!--header(头部)-->
+		<header id="header">
+				<div class="ban_c clearfix">
+					
+					<div class="header-left fl">	
+						<a class="logo" href="../index.html"><img src="../img/logo.png" /></a>
+					</div>
+					
+					<div class="header-middle fl">
+						<ul>
+							<li class="active">
+								<a href="WeddingTips.html">婚礼贴士</a>
+							</li>
+							<li>
+								<a href="SpecialOffers.html">优惠活动</a>
+							</li>
+							<li>
+								<a href="#">良辰吉日</a>
+							</li>
+							<li>
+								<a href="#">查找门店</a>
+							</li>
+							<li>
+								<a href="joinUs.html">加入我们</a>
+							</li>
+						</ul>
+						
+					</div>
+					<div class="header-right  fr">
+						<ul >
+							<li>
+								<a href="#">手机应用<img src="img/ewm.png" alt="二维码" /></a>
+							</li>
+							<li>
+								<a href="#">大嫁公众号<img src="img/ewm.png" alt="二维码" /></a>
+							</li>
+						</ul>
+		
+						<div class="search-bar">
+							<input placeholder="请输入要搜索的内容" class="fl" type="text" />
+							<a class="search-bar-fangdajing" href="#"><img src="img/fangdajin.png" alt="放大镜" /></a>
+						</div>
+					</div>
+				</div>
+		
+		</header>
+		<!--/header(头部)-->
+		<!--banner(横幅)-->
+		<section id="banner">
+			<!--轮播-->
+			<ul class="pgwSlideshow">
+				<li><img src="../img/banner.png" alt="" /></li>
+				<li><img src="../img/banner.png" alt="" /></li>
+				<li><img src="../img/banner.png" alt="" /></li>
+				<li><img src="../img/banner.png" alt="" /></li>
+			</ul>
+			<div class="xiazai">
+				<a href="javascript:;">下载APP查看更多</a>
+			</div>
+		</section>
+
+		<!--/banner-->
+
+		<!--intro（简介）-->
+		<section id="intro">
+			<script type="text/template" id="intro-content">
+				<div class="ban_c">
+					<h3>摄像简介:</h3>
+					<p>商家名: <span class="hotel-name"><%=response.camerainfo.businessname%></span> 服务价：<span class="hotel-price">￥8888  起</span> 地址：<span><%=response.camerainfo.address%></span></p>
+					<p class="intro-particulars">
+						简介：信息
+					</p>
+				</div>
+			</script>
+		</section>
+		<!--/intro（简介）-->
+
+		<!--combo(套餐)-->
+		<section id="combo">
+			<script type="text/template" id="combo-content">
+				<div class="ban_c clearfix">
+					<h3>套餐:</h3>
+					<ul>
+						<% for(var i=0; i<response.length;i++) { %>
+						<li id="<%=response[i].camerapackageid%>">
+							<div class="listimg">
+								<% if(response[i].listimg == '') { %>
+								<img class="hotel-ul1-img" src='../../djweixin/img/hotel/hotel-title.png' />
+								<% } else{ %>
+								<img class="hotel-ul1-img" src='http://120.55.70.81:8088/dajiaserver/<%=response[i].listimg%>' alt="司仪图片" />
+								<% } %>
+							</div>
+							<p><span><%=response[i].packagename%></span>￥
+								<%=response[i].price%>
+							</p>
+						</li>
+						<% } %>
+					</ul>
+
+					<div class="combo-message">
+						<!--轮播-->
+						<div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
+
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<img src="../img/banner.png" alt="...">
+								</div>
+								<div class="item">
+									<img src="../img/banner.png" alt="...">
+								</div>
+								<div class="item">
+									<img src="../img/banner.png" alt="...">
+								</div>
+							</div>
+
+							<!-- Controls -->
+							<a class="left carousel-control" href="#carousel-example-generic1" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only"></span>
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic1" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only"></span>
+							</a>
+						</div>
+						<div class="message">
+
+						</div>
+					</div>
+			</script>
+		</section>
+
+		<!--/combo-->
+
+		<!--case(案例)-->
+		<section id="case">
+			<script type="text/template" id="case-content">
+				<div class="ban_c">
+					<h3>视频：</h3>
+					<ul>
+						<% for(var i=0;i<response.length;i++){ %>
+						<li id='<%=response[i].caseid%>'>
+							<div class="listimg">
+								<% if(response[i].listimg == '') { %>
+								<img class="hotel-ul1-img" src='../../djweixin/img/hotel/hotel-title.png' />
+								<% } else{ %>
+								<img class="hotel-ul1-img" src='http://120.55.70.81:8088/dajiaserver/<%=response[i].listimg%>' alt="司仪图片" />
+								<% } %>
+							</div>
+							<p>
+								<%=response[i].name%>
+							</p>
+						</li>
+						<% } %>
+					</ul>
+
+					<div class="case-Details">
+						<!--轮播-->
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<img src="../img/banner.png" alt="...">
+								</div>
+								<div class="item">
+									<img src="../img/banner.png" alt="...">
+								</div>
+								<div class="item">
+									<img src="../img/banner.png" alt="...">
+								</div>
+							</div>
+
+							<!-- Controls -->
+							<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only"></span>
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only"></span>
+							</a>
+						</div>
+
+						<div class="message">
+
+						</div>
+					</div>
+				</div>
+			</script>
+
+		</section>
+		<!--/combo-->
+		<!--footer(底部)-->
+		<footer id="footer">
+			
+			<div class="footer-top clearfix">
+				<div class="ban_c">
+					<div class="footer-title fl"><img src="../img/zt.png"/></div>
+					<div class="footer-top-right fr">
+						<img src="../img/ewm.png" alt="二维码" />
+						<p>大嫁公众号</p>
+					</div>
+					<div class="footer-top-left fr">
+						<img src="../img/ewm.png" alt="二维码" />
+						<p>下载APP</p>
+						<p>领奖励 邀好友 了解更多！</p>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p class="footer-bottom-p1">浙公网安备 33010602006275号</p>
+				<p class="footer-bottom-p2">copyright@2..2-2015 大嫁网婚礼会所 户ICO备0604456720 沪ICP证 备-20130044 上海市公安局宝山分局 备案编号 31456789</p>
+				<img src="../img/pinggu.png" alt="" />
+			</div>
+		</footer>
+		<!--/footer-->
+
+		<script src="../lib/less/less.min.js"></script>
+		<script src="../lib/Template/template-native.js"></script>
+		<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+		<script src="../lib/slider/pgwslideshow.min.js"></script>
+		<script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script src="../js/tool.js"></script>
+		<script>
+			$(function() {
+
+				//关闭按钮
+				$('.close').click(function() {
+					$('.case-Details').hide();
+				});
+
+				$('#case li').click(function() {
+					$('.case-Details').show();
+				});
+
+				//获取上一个页面上传过来的ID
+				var thisURL = document.URL;
+				var getval = thisURL.split('=');
+				var cameraid = getval.slice(-1).join();
+				//获取摄像数据
+				$.ajax({
+					type: "post",
+					url: "http://120.55.70.81:8088/dajiaserver/Rest/shop/get_camera_info",
+					data: { 'cameraid': cameraid },
+					async: true,
+					success: function(msg) {
+//						console.log(msg)
+						if(msg.response.picture.length > 0) {
+							$('.pgwSlideshow li').detach();
+							for(var i = 0; i < msg.response.picture.length; i++) {
+								console.log(msg.response.picture[i]);
+								$('.pgwSlideshow').append('<li><img src="http://120.55.70.81:8088/dajiaserver/' + msg.response.picture[i] + '" alt="" /></li>');
+							}
+						}
+						
+						//婚纱摄影详情简介数据渲染
+						//						console.log(msg);
+						var introContent = template("intro-content", msg);
+						$('#intro').html(introContent);
+
+						$('.pgwSlideshow').pgwSlideshow({
+							"autoSlide": true
+						});
+
+					}
+				});
+
+				//套餐列表数据
+				$.ajax({
+					type: "post",
+					url: "http://120.55.70.81:8088/dajiaserver/Rest/shop/get_camera_package_list",
+					data: { 'cameraid': cameraid},
+					async: true,
+					success: function(data) {
+//						console.log(data);
+						//数据渲染
+						var comboContent = template("combo-content", data);
+						$('#combo').html(comboContent);
+
+						//显示
+						$('#combo li').click(function() {
+							$('.combo-message').fadeIn();
+							var camerapackageid = $(this).attr('id');
+							$.ajax({
+								type: "post",
+								url: "http://120.55.70.81:8088/dajiaserver/Rest/shop/get_camera_package_info",
+								data: { 'camerapackageid': camerapackageid },
+								async: true,
+								success: function(data) {
+									console.log(data);
+									//数据渲染
+									var comboMessage = template("comboMessage", data);
+									$('#combo .message').html(comboMessage);
+
+									$('#carousel-example-generic1').carousel({
+										interval: 3000
+									});
+									var item;
+									if(data.response.picture.length > 0) {
+										$('#combo .carousel-inner .item').detach();
+										item = 0;
+										for(var i = 0; i < data.response.picture.length; i++) {
+											if(!(data.response.picture[i] == '')) {
+												$('#combo .carousel-inner').append('<div class="item"><img src="http://120.55.70.81:8088/dajiaserver/' + data.response.picture[i] + '" alt="..."></div>');
+											}
+										}
+										$('#combo .carousel-inner .item').eq(0).addClass('active');
+										item = $('#combo .carousel-inner .item').length;
+										var active = $('#combo .carousel-inner .active').index() + 1;
+										$('#combo .yeshu').text(active + '/' + data.response.picture.length);
+
+									} else {
+										$('#combo .item img').attr('src', '../img/banner.png');
+									};
+									item = $('#combo .carousel-inner .item').length;
+									$('#combo #carousel-example-generic1').on('#combo slide.bs.carousel', function() {
+										var active = $('#combo .carousel-inner .active').index() + 1;
+										$('#combo .yeshu').text(active + '/' + item);
+									});
+
+									//获取文档的高度并设置赋值给屏障背景
+									var eh = $(document).height();
+									$('.pingzhang').height(eh).css('display', 'block');
+									//关闭按钮
+									$('.close').click(function() {
+										close_Slider('#carousel-example-generic1','.pingzhang');
+									});
+									$('.pingzhang').click(function() {
+										close_Slider('#carousel-example-generic1','.pingzhang');
+									});
+									var message = document.getElementsByClassName('combo-message');
+									sc1(message);
+								}
+							});
+						});
+					}
+				});
+				//视频数据获取并渲染
+				$.ajax({
+					type: "post",
+					url: "http://120.55.70.81:8088/dajiaserver/Rest/shop/get_emcee_vedio_list",
+					data: { 'cameraid': cameraid },
+					async: true,
+					success: function(data) {
+						//						console.log(data);
+						//数据渲染
+						var caseContent = template("case-content", data);
+						$('#case').html(caseContent);
+
+						//显示
+						$('#case li').click(function() {
+							$('.case-Details').fadeIn();
+							var caseid = $(this).attr('id');
+							$.ajax({
+								type: "post",
+								url: "http://120.55.70.81:8088/dajiaserver/Rest/shop/get_wedding_case_info",
+								data: { 'caseid': caseid },
+								async: true,
+								success: function(data) {
+									//数据渲染
+									var caseMessage = template("caseMessage", data);
+									$('#case .message').html(caseMessage);
+
+									//获取文档的高度并设置赋值给屏障背景
+									var eh = $(document).height();
+									$('.pingzhang').height(eh).css('display', 'block');
+									//关闭按钮
+									$('.close').click(function() {
+										$('.case-Details').fadeOut();
+										$('.pingzhang').css('display', 'none');
+									});
+									$('.pingzhang').click(function() {
+										$('.case-Details').css('display', 'none');
+										$(this).css('display', 'none');
+									});
+									var message = document.getElementsByClassName('case-Details');
+									sc1(message);
+								}
+							});
+						});
+					}
+				});
+				
+				function close_Slider(id,div) {
+					$('.combo-message').fadeOut();
+					$('.case-Details').fadeOut();
+					$(div).css('display', 'none');
+					$(this).css('display', 'none');
+					$(id).carousel("pause");
+				}
+				function sc1(DivId) {
+
+					var t = $(DivId).css('top');
+					var l = $(DivId).css('left');
+					//获取定位位置
+					//					console.log('t=' + t);
+					//					console.log('l=' + l);
+
+					var st = $(document).scrollTop();
+					var sl = $(document).scrollLeft();
+					//获取滚动上去那部分
+					//					console.log('st=' + st);
+					//					console.log('sl=' + sl);
+
+					var ch = document.documentElement.clientHeight;
+					var cw = document.documentElement.clientWidth;
+					//可见屏幕大小
+					//					console.log('ch=' + ch);
+					//					console.log('cw=' + cw);
+
+					var ot = $(DivId).offset().top;
+					var ol = $(DivId).offset().left;
+					//距离文档左边跟上边的距离
+					//					console.log('ot=' + ot);
+					//					console.log('ol=' + ol);
+
+					var w = $(DivId).width();
+					var h = $(DivId).height();
+					//对象的高度和宽度
+					//					console.log('w=' + w);
+					//					console.log('h=' + h);
+
+					var top = st + (ch - h) / 2;
+					var left = sl + (cw - w) / 2;
+
+					//					console.log(top);
+					//					console.log(left);
+
+					$(DivId).css('top', top);
+					$(DivId).css('left', left);
+					//alert($(DivId).style.top); 
+				}
+			});
+		</script>
+
+		<script type="text/template" id="comboMessage">
+			<h3><%=response.packageinfo.packagename%></h3>
+			<p>
+				<%=response.packageinfo.info%>
+			</p>
+			<table>
+				<tr>
+					<td>团队名:</td>
+					<td>
+						<%=response.packageinfo.studioname%>
+					</td>
+					<td>出城费:</td>
+					<td>
+						<%=response.packageinfo.outcityprice%>
+					</td>
+					<td>超时费:</td>
+					<td>
+						<%=response.packageinfo.overtimeprice%>
+					</td>
+					<td>跟拍时段:</td>
+					<td>
+						<%=response.packageinfo.workinghours%>
+					</td>
+					
+				</tr>
+				
+			</table>
+
+			<span class="yeshu">1/8</span>
+			<img class="close" src="../img/c.png" alt="关闭" />
+		</script>
+
+		<script type="text/template" id="caseMessage">
+			
+		</script>
+
+	</body>
+
+</html>

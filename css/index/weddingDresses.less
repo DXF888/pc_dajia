@@ -1,0 +1,155 @@
+@import "base.less";
+@import "index.less";
+
+
+
+/*婚庆公司列表开始*/
+#weddingDresses{
+    position: relative;
+    margin-top: 30px;
+    ul {
+        overflow: hidden;
+        width: 100%;
+        li {
+            cursor: pointer;
+            background-color: #FFFFFF;
+            float: left;
+            width: 32%;
+            margin-right: 2%;
+            border: 1px solid #bababb;
+            border-top: none;
+            margin-bottom: 30px;
+            color:#bbbbbb;
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+            .listimg{
+                width: 100%;
+                height: 340px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    transition: transform .5s ease-in .1s;
+                    &:hover{
+                        transform:scale(1.2,1.2);
+                    }
+                }
+            }
+            h3{
+                padding: 18px 0;
+                text-align: center;
+                font-size: 20px;
+            }
+            p {
+                
+                padding-left: 48px;
+                padding-right: 48px;
+                margin-bottom:8px;
+                span{
+                    text-align: center;
+                    display: inline-block;
+                    font-size: 18px;
+                    border-right: 1px solid #bbbbbb;
+                    &:first-child{
+                        padding-right: 26px;
+                        margin-right: 26px;
+                        i{
+                            position: relative;
+                            left: -10px;
+                            display: inline-block;
+                            width: 23px;
+                            height: 25px;
+                            background: url(../../../djweixin/img/hotel/liulan.png) no-repeat left 100%;
+                            background-size: contain;
+                        }
+                    }
+                    &:last-child{
+                        border-right: none;
+                        color: #F05053;
+                    }
+                }
+                
+
+            }
+            
+        }
+    }
+}
+//面包屑导航
+#subnav{
+    p{
+        padding: 20px 0;
+        color:#9b9b9b;
+        font-size: 18px;
+        a.index{
+            color:#9b9b9b;
+        }
+        a.hotel{
+           color:#F05053; 
+        }
+    }
+    h2{
+        font-size: 30px;
+    }
+}
+
+
+//筛选开始
+#filtrate{
+    margin-top: 30px;
+    color:#7B7B7B;
+    .area,.price{
+        padding-left: 30px;
+        background-color: #FFFFFF;
+        border-bottom: 1px dashed #c6c6c6;
+        height: 70px;
+        line-height: 70px;
+        h3{   
+            display: inline-block;
+            background: url(../../img/wz.png) no-repeat left center;
+            font-size: 24px;
+            margin-right: 44px;
+            padding-left:36px;
+        }
+        ul{
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: bottom;
+            li{
+                
+                cursor: pointer;
+                font-size: 18px;
+                float: left;
+                margin-right: 26px;
+                &:first-child{
+                    color: #F05053;
+                }
+                &:hover{
+                    color: #F05053;
+                }
+            }
+        }
+        
+    }
+    .price{
+        border-bottom:none;
+        h3{
+            display: inline-block;
+             background: url(../../img/jg.png) no-repeat left center;
+            padding-left:40px;
+            font-size: 24px;
+            margin-right: 44px;
+        }
+    }
+
+}
+
+//筛选结束
+
+/*婚纱礼服列表结束*/
+
+
+
+
+

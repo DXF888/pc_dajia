@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>大嫁网后台管理系统</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../img.ico" />
+		<link rel="stylesheet" href="../css/cssControl/jquery.Jcrop.min.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/uploadImg/css/font-awesome.4.6.0.css">
+		<link rel="stylesheet" href="../lib/uploadImg/css/amazeui.min.css">
+		<link rel="stylesheet" href="../../uploading/uploading2/cropper.css">
+		<link rel="stylesheet" href="../lib/uploadImg/css/custom_up_img.css">
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/cssControl/control.css" />
+	</head>
+
+	<body>
+		<!--main(主要内容)-->
+		<div class="main">
+			<!--内容-->
+			<div class="content hotelMessageControl-content fl">
+
+				<div class="hotelMessageControl-container">
+					<form id='form1'>
+						<table>
+							<caption>婚庆公司首页详情管理</caption>
+							<tr>
+								<th>名称</th>
+								<th><input type="text" name="BusinessName" /></th>
+								<th class="district">区域</th>
+								<th>
+									<select class="area" name="District">
+										<option value="">请选择区域</option>
+										<option value="西湖区">西湖区</option>
+										<option value="下城区">下城区</option>
+										<option value="上城区">上城区</option>
+										<option value="江干区">江干区</option>
+										<option value="拱墅区">拱墅区</option>
+										<option value="滨江区">滨江区</option>
+										<option value="萧山区">萧山区</option>
+										<option value="余杭区">余杭区</option>
+									</select>
+								</th>
+							</tr>
+							<tr>
+								<th>简介</th>
+								<th colspan="3" class="taocan"><textarea name="" rows="6" cols="80"></textarea></th>
+							</tr>
+							<tr>
+								<th>详细地址</th>
+								<th colspan="3"><input type="text" /></th>
+							</tr>
+							<tr>
+								<th>是否推荐</th>
+								<th colspan="3">
+									是<input type="radio" name="tuijian"/>
+									否<input type="radio" name="tuijian"/>
+								</th>
+							</tr>
+							<tr>
+								<th class="move move-uploading">移动端图片上传</th>
+								<th class="move1">
+									<p class="move1-p1">列表图片上传</p>
+									<div class="up-img-cover up-img-touch3">
+										<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										<span style="display: none;width: 620px;height: 392px;">1</span>
+									</div>
+
+									<div>
+										<a style="text-align: center; display: block;" id="pic"></a>
+									</div>
+
+									<input type="text" placeholder="链接地址" />
+								</th>
+								<th class="move2">
+									<p class="move1-p2">logo上传</p>
+									<div class="up-img-cover up-img-touch2">
+										<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										
+									</div>
+
+									<div>
+										<a style="text-align: center; display: block;" id="pic"></a>
+									</div>
+
+									<p><input type="text" placeholder="链接地址" /></p>
+								</th>
+								<th class="move3 clearfix">
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch4">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+											<span style="display: none;">1.56</span>
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch4">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch4">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch4">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch4">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch4">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch4">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch4">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<p class="move3-operation"><span class="move-operation">编辑</span><button>批量上传</button></p>
+								</th>
+							</tr>
+							<tr>
+								<th class="move move-uploading">pc端图片上传</th>
+								<th class="move1">
+									<p class="move1-p1">列表图片上传</p>
+									<div class="up-img-cover up-img-touch">
+										<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+									</div>
+
+									<div>
+										<a style="text-align: center; display: block;" id="pic"></a>
+									</div>
+
+									<input type="text" placeholder="链接地址" />
+								</th>
+								<th class="move2">
+									<p class="move1-p2">logo上传</p>
+									<div class="up-img-cover up-img-touch2">
+										<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+									</div>
+
+									<div>
+										<a style="text-align: center; display: block;" id="pic"></a>
+									</div>
+
+									<p><input type="text" placeholder="链接地址" /></p>
+								</th>
+								<th class="move3 clearfix">
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<div class="move4-box fl">
+										<span class="delete-img">x</span>
+										<div class="up-img-cover up-img-touch1">
+											<img class="am-circle" alt="点击图片上传" src="../img/imgControl/tupian.png" data-am-popover="{content: '点击上传', trigger: 'hover focus'}">
+										</div>
+
+										<div>
+											<a style="text-align: center; display: block;" id="pic"></a>
+										</div>
+										<input type="text" placeholder="链接地址" />
+									</div>
+									<p class="move3-operation"><span class="move-operation">编辑</span><button>批量上传</button></p>
+								</th>
+							</tr>
+						</table>
+					</form>
+					<input type="submit" value="保存" onclick="confirm('确定提交信息吗？')?file_upload():false" />
+
+					<!--图片上传框-->
+					<div class="am-modal am-modal-no-btn up-frame-bj " tabindex="-1" id="doc-modal-1">
+						<div class="am-modal-dialog up-frame-parent up-frame-radius">
+							<div class="am-modal-hd up-frame-header">
+								<label>上传图片</label>
+								<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+							</div>
+							<div class="am-modal-bd  up-frame-body">
+								<div class="am-g am-fl">
+									<div class="am-form-group am-form-file">
+										<div class="am-fl">
+											<button type="button" class="am-btn am-btn-default am-btn-sm">
+			  <i class="am-icon-cloud-upload"></i> 选择要上传的文件</button>
+										</div>
+										<input type="file" id="inputImage">
+									</div>
+								</div>
+								<div class="am-g am-fl">
+									<div class="up-pre-before up-frame-radius">
+										<img alt="" src="" id="image">
+									</div>
+									<div class="up-pre-after up-frame-radius">
+									</div>
+								</div>
+								<div class="am-g am-fl">
+									<div class="up-control-btns">
+										<span class="am-icon-rotate-left" onclick="rotateimgleft()"></span>
+										<span class="am-icon-rotate-right" onclick="rotateimgright()"></span>
+										<span class="am-icon-check" id="up-btn-ok" url="http://120.55.70.81:8088/dajiaserver/Admin/BusinessInfo/set_hotel_info"></span>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<!--加载框-->
+					<div class="am-modal am-modal-loading am-modal-no-btn" tabindex="-1" id="my-modal-loading">
+						<div class="am-modal-dialog">
+							<div class="am-modal-hd">正在上传...</div>
+							<div class="am-modal-bd">
+								<span class="am-icon-spinner am-icon-spin"></span>
+							</div>
+						</div>
+					</div>
+
+					<!--警告框-->
+					<div class="am-modal am-modal-alert" tabindex="-1" id="my-alert">
+						<div class="am-modal-dialog">
+							<div class="am-modal-hd">信息</div>
+							<div class="am-modal-bd" id="alert_content">
+								成功了
+							</div>
+							<div class="am-modal-footer">
+								<span class="am-modal-btn">确定</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+		<script src="../js/control.js"></script>
+		<script src="../js/hotelControl.js"></script>
+		<script src="../lib/uploadImg/js/amazeui.min.js" charset="utf-8"></script>
+		<script src="../lib/uploadImg/js/cropper.min.js" charset="utf-8"></script>
+		<script src="../lib/uploadImg/js/custom_up_img.js" charset="utf-8"></script>
+	</body>
+
+</html>

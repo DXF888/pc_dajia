@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>大嫁网</title>
+		<link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="../logo.ico" />
+		<link rel="stylesheet" href="../css/hover-min.css" />
+		<link rel="stylesheet" type="text/less" href="../css/index/weddingPhotography.less" />
+	</head>
+
+	<body>
+
+		<!--header(头部)-->
+		<header id="header">
+				<div class="ban_c clearfix">
+					
+					<div class="header-left fl">	
+						<a class="logo" href="../index.html"><img src="../img/logo.png" /></a>
+					</div>
+					
+					<div class="header-middle fl">
+						<ul>
+							<li class="active">
+								<a href="view/WeddingTips.html">婚礼贴士</a>
+							</li>
+							<li>
+								<a href="view/SpecialOffers.html">优惠活动</a>
+							</li>
+							<li>
+								<a href="#">良辰吉日</a>
+							</li>
+							<li>
+								<a href="#">查找门店</a>
+							</li>
+							<li>
+								<a href="view/joinUs.html">加入我们</a>
+							</li>
+						</ul>
+						
+					</div>
+					<div class="header-right  fr">
+						<ul >
+							<li>
+								<a href="#">手机应用<img src="img/ewm.png" alt="二维码" /></a>
+							</li>
+							<li>
+								<a href="#">大嫁公众号<img src="img/ewm.png" alt="二维码" /></a>
+							</li>
+						</ul>
+		
+						<div class="search-bar">
+							<input placeholder="请输入要搜索的内容" class="fl" type="text" />
+							<a class="search-bar-fangdajing" href="#"><img src="img/fangdajin.png" alt="放大镜" /></a>
+						</div>
+					</div>
+				</div>
+		
+		</header>
+		<!--/header(头部)-->
+
+		<!--subnav(导航)-->
+		<div id="subnav">
+			<div class="ban_c">
+				<p>当前位置：
+					<a class="index" href="#">首页</a>&gt;
+					<a class="hotel" href="#">司仪</a>
+				</p>
+				<h2>司仪</h2>
+			</div>
+		</div>
+		<!--/subnav-->
+
+		<!--筛选开始-->
+		<section id="filtrate">
+			<div class="ban_c">
+				<div class="area">
+					<h3>区域</h3>
+					<ul class="clearfix">
+						<li>全部</li>
+						<li>西湖区</li>
+						<li>上城区</li>
+						<li>下城区</li>
+						<li>拱墅区</li>
+						<li>江干区</li>
+						<li>萧山区</li>
+						<li>余杭区</li>
+						<li>近郊</li>
+						<li>中心湖区</li>
+						<li>下沙区</li>
+						<li>富阳区</li>
+					</ul>
+				</div>
+				<div class="price">
+					<h3>价格</h3>
+					<ul class="clearfix">
+						<li>全部</li>
+						<li>2000以下</li>
+						<li>2000-3000</li>
+						<li>3000-6000</li>
+						<li>6000以上</li>
+					</ul>
+				</div>
+			</div>
+
+		</section>
+		<!--筛选结束-->
+
+		<!--hotel-content(酒店内容开始)-->
+		<section id="weddingDresses">
+			<!--加载动画-->
+			<div class="loader-inner ball-spin-fade-loader">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+
+			<script type="text/template" id="Dresses">
+				<div class="ban_c clearfix">
+					<ul>
+						<% for(var i = 0 ;i < response.length;i++) { %>
+						<li id="<%=response[i].emceeid%>">
+							<% if(response[i].applistimg == '') { %>
+								<div class="listimg">
+									<img class="hotel-ul1-img" src='../../djweixin/img/hotel/hotel-title.png' />
+								</div>
+							<% } else{ %>
+								<div class="listimg">
+									<img class="hotel-ul1-img" src='http://120.55.70.81:8088/dajiaserver/<%=response[i].applistimg%>' />
+								</div>
+							<% } %>
+							<h3><%=response[i].studioname%></h3>
+							<p>
+								<span class="lr"><i></i><%=response[i].visit%></span>
+								<span class='jq'>￥<%=response[i].price%></span>
+							</p>
+						</li>
+						<% } %>
+					</ul>
+				</div>
+			</script>
+		</section>
+
+		<!--hotel-content(酒店内容结束)-->
+
+		<!--pages(分页)-->
+		<!--<nav class="text-center">
+			<ul class="pagination">
+				<li>
+					<a href="javascript:;" id="Previous" aria-label="Previous">
+						<span aria-hidden="true"></span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="javascript:;">1</a>
+				</li>
+				<li>
+					<a href="javascript:;">2</a>
+				</li>
+				<li>
+					<a href="javascript:;">3</a>
+				</li>
+				<li>
+					<a href="javascript:;">4</a>
+				</li>
+				<li>
+					<a href="javascript:;">5</a>
+				</li>
+				<li>
+					<a href="javascript:;" id="Next" aria-label="Next">
+						<span aria-hidden="true"></span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		-->
+			
+			
+		<!--/pages-->
+
+		<!--footer(底部)-->
+		<footer id="footer">
+			
+			<div class="footer-top clearfix">
+				<div class="ban_c">
+					<div class="footer-title fl"><img src="../img/zt.png"/></div>
+					<div class="footer-top-right fr">
+						<img src="../img/ewm.png" alt="二维码" />
+						<p>大嫁公众号</p>
+					</div>
+					<div class="footer-top-left fr">
+						<img src="../img/ewm.png" alt="二维码" />
+						<p>下载APP</p>
+						<p>领奖励 邀好友 了解更多！</p>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p class="footer-bottom-p1">浙公网安备 33010602006275号</p>
+				<p class="footer-bottom-p2">copyright@2..2-2015 大嫁网婚礼会所 户ICO备0604456720 沪ICP证 备-20130044 上海市公安局宝山分局 备案编号 31456789</p>
+				<img src="../img/pinggu.png" alt="" />
+			</div>
+		</footer>
+		<!--/footer-->
+
+		<script src="../lib/less/less.js"></script>
+		<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+		<script src="../lib/Template/template-native.js"></script>
+
+		<script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script src="../js/tool.js"></script>
+		<script>
+			
+			$(function(){
+				
+				var newData = {
+					"page" : 1
+				}
+				$.ajax({
+					type:"post",
+					url:"http://120.55.70.81:8088/dajiaserver/Rest/shop/get_emcee_list",
+					data:newData,
+					async:true,
+					success:function(data){
+						console.log(data);
+						var weddingDressesHtml = template("Dresses", data);
+						$('#weddingDresses').html(weddingDressesHtml);
+						$('#weddingDresses li').on('click',function(){
+							var id = $(this).attr('id');
+							window.location.href = "EmceeDetails.html?id=" + id;
+						});
+					}
+				});		
+			});
+		</script>
+	</body>
+
+</html>

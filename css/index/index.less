@@ -1,0 +1,484 @@
+
+/*返回顶部*/
+body {
+    min-width: 1366px;
+    background-color: #F2F2F2;
+    font-size: 12px;
+}
+
+/*侧边导航开始*/
+
+#sideNav {
+    display: none;
+    position: fixed;
+    left: 3%;
+}
+
+#sideNav li {
+    background-size: contain;
+    border-top: 1px solid #F1F1F1;
+    background-color: #BABABB;
+    z-index: 1000;
+}
+#sideNav li:first-child {
+    border-top: none;
+}
+
+#sideNav li .left_btn {
+    box-sizing: content-box;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+    width: 24px;
+    padding: 7px 5px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+}
+#sideNav li:last-child .left_btn {
+    height: 20px;
+    background-image: url("../../img/TOP.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#sideNav li .left_btn:hover {
+    background-color: #ff6666;
+}
+
+#sideNav .left_btn .left_btn_text {}
+
+#sideNav .active {
+    background-color: #ff6666;
+}
+
+/*侧边导航结束*/
+
+/*头部开始*/
+
+#header {
+    border-bottom: 1px solid #F05053;
+    position: relative;
+    .header-left {
+        width: 20%;
+        padding-top: 44px;
+        padding-right: 66px;
+        .logo {
+            display: inline-block;
+            height: 138px;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .header-middle {
+        width: 60%;
+        padding-top: 120px;
+        padding-right: 44px;
+        ul {
+            display: flex;
+            overflow: hidden;
+            justify-content: space-between;
+
+            li {
+
+//              margin-right: 120px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    color: #7b7b7b;
+                    font-size: 18px;
+                    &:hover {
+                        color: #F05053;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    .header-right {
+        width: 20%;
+        position: relative;
+        padding-top: 44px;
+        font-size: 16px;
+        ul {
+            width: 100%;
+            padding-left: 30%;
+            li {
+                float: left;
+                a {
+                    color:#F05053;
+                    img {
+                        width: 70px;
+                        height: 70px;
+                        display: none;
+                    }
+                }
+                &:last-child {
+                    margin: 0;
+                }
+                &:nth-child(1),
+                &:nth-child(2) {
+                    a{
+                        position: relative;
+                    }
+                    a:hover {
+                        img {
+                            display: block;
+                        }
+
+                    }
+                }
+                &:nth-child(1) img,
+                &:nth-child(2) img {
+                    position: absolute;
+//                  top: 66px;
+                    z-index: 999;
+                }
+                &:nth-child(1){
+                    margin-right: 10%;
+                }
+                &:nth-child(1) img {
+                    left: -3px;
+                }
+                &:nth-child(2) img {
+//                  left: 84px;
+                }
+
+            }
+        }
+        .search-bar {
+            width: 100%;
+            position: absolute;
+            bottom: -70px;
+            right: 0;
+            input {
+                width: 180px;
+                outline: none;
+                border: none;
+                display: none;
+                height: 22px;
+                line-height: 22px;
+                background-color: transparent;
+                padding-left: 10px;
+            }
+            a {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+    }
+}
+
+/*头部结束*/
+
+/*横幅开始*/
+
+#banner {
+    margin-top: 10px;
+}
+#banner .glyphicon-chevron-left:before,
+.glyphicon-chevron-right:before {
+    font-size: 56px;
+}
+
+#banner .slideBox {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+
+    .hd {
+        height: 15px;
+        overflow: hidden;
+        position: absolute;
+        right: 60px;
+        bottom: 10px;
+        z-index: 1;
+
+        ul {
+            overflow: hidden;
+            zoom: 1;
+            float: left;
+
+            li {
+                border-radius: 50%;
+                float: left;
+                margin-right: 10px;
+                width: 15px;
+                height: 15px;
+                line-height: 14px;
+                text-align: center;
+                background: rgba(255, 255, 255, .6);
+                cursor: pointer;
+                &.on {
+                    background: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    .bd {
+        position: relative;
+        height: 100%;
+        z-index: 0;
+
+        li {
+            zoom: 1;
+            vertical-align: middle;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+}
+
+
+/*横幅结束*/
+
+/*步骤开始*/
+
+#procedure {
+    margin-top: 82px;
+    .content {
+        width: 100%;
+        text-align: center;
+        h2 {
+            font-size: 72px;
+            color: #242424;
+        }
+        h3 {
+            margin-top: 33px;
+            color: #8A8A8A;
+            font-size: 30px;
+            margin-bottom: 5%;
+        }
+        ul {
+            overflow: hidden;
+            margin-top: 20px;
+            li {
+                border-right: 1px solid #8A8A8A;
+                width: 19.9%;
+                height: 279px;
+                float: left;
+                &:nth-child(5n) {
+                    border-right: none;
+                }
+                a{
+                    color: #8A8A8A;
+                    font-size: 24px;
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                    .procedure-p1 {
+                        overflow: hidden;
+                        margin: 32px 0;
+                    }
+                    .procedure-p2 {
+                        overflow: hidden;
+                        background: url("../../img/jiantou.png") no-repeat 77% center;
+                    }
+                    .Hotel-img,
+                    .Photography-img,
+                    .assistant-img,
+                    .trip-img,
+                    .Overseas-img,
+                    .car-img,
+                    .dessert-img,
+                    .Company-img,
+                    .Service-personal-img,
+                    .dress-img,
+                    {
+                        width: 108px;
+                        height: 108px;
+                        text-align: center;
+                        margin: 0 auto;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
+
+#procedure .content .procedure-content-ul1 li {
+    margin-top: 0;
+}
+
+#procedure .content .hideNav {
+    width: 86%;
+    display: none;
+    overflow: hidden;
+    background-color: #F6F6F6;
+}
+
+#procedure .content .hideNav li a .procedure-p2 {
+    font-size: 16px;
+}
+
+#procedure .content .hideNav li {
+    border: none;
+    width: 19.9%;
+    margin: 0;
+}
+
+#procedure .content .hideNav li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 5px 0;
+}
+
+#procedure .content .hideNav li img {
+    vertical-align: middle;
+}
+
+#procedure .content .hideNav .showNav-procedure-a1 {
+    margin-bottom: 0;
+}
+
+/*步骤结束*/
+
+/*酒店开始*/
+
+#container {
+    margin-top: 5%;
+}
+
+#container .main-content-top {
+    padding: 2% 1%;
+}
+
+#Photography,
+#Service-Personal,
+#Wedding-Car,
+#Wedding-Company,
+#Wedding-Dessert,
+#Wedding-Dress,
+#Wedding-Hotel {
+    margin-top: 10px;
+}
+
+#container .main-content-top .main-content-top-left {
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+#container .main-content-top .main-content-top-left h3 {
+    margin-right: 5%;
+    display: inline-block;
+    font-size: 36px;
+    color: #242424;
+}
+
+#container .main-content-top .main-content-top-left span {
+    font-size: 36px;
+    color: #FF6666;
+}
+
+#container .main-content-top .main-content-top-right {
+    padding-top: 1%;
+}
+
+#container .main-content-bottom .main-content-bottom-bottom li,
+#container .main-content-bottom .main-content-bottom-top li {
+    text-align: center;
+    float: left;
+    margin-right: 1%;
+    border: 1px solid #8A8A8A;
+}
+
+#container .main-content-bottom .main-content-bottom-bottom li a,
+#container .main-content-bottom .main-content-bottom-top li a {
+    color: #242424;
+}
+
+#container .main-content-bottom .main-content-bottom-top li {
+    width: 32.5%;
+}
+
+#container .main-content-bottom .main-content-bottom-bottom li {
+    margin-top: 1%;
+    width: 24%;
+}
+#container .main-content-bottom .main-content-bottom-bottom li:last-child,
+#container .main-content-bottom .main-content-bottom-top li:last-child {
+    margin-right: 0;
+}
+
+#container .main-content-bottom .main-content-bottom-bottom li img,
+#container .main-content-bottom .main-content-bottom-top li img {
+    width: 100%;
+}
+
+#container .main-content-bottom .main-content-bottom-top li p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#container .main-content-bottom .main-content-bottom-bottom li p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#container .main-content-bottom .main-content-bottom-bottom li {}
+
+/*酒店结束*/
+
+/*底部开始*/
+
+#footer {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 105px;
+    background: #F6F6F6;
+    padding-bottom: 2%;
+    .footer-title{
+        padding:75px 0;
+        padding-right: 75px;
+        border-right: 1px dashed #F05053;
+    }
+    .footer-top {
+        padding-top: 54px;
+        padding-bottom: 54px;
+        text-align: center;
+        width: 100%;
+        /*height: 330px;*/
+        .footer-top-right {
+            padding-right: 12%;
+        }
+        .footer-top-left {
+            padding-right: 10%;
+        }
+    }
+    .footer-bottom {
+        .footer-bottom-p2 {
+            margin-top: 28px;
+            img {
+                margin-top: 14px;
+            }
+        }
+    }
+}
+
+
+/*底部结束*/

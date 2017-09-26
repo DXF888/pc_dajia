@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>大嫁网</title>
+		<link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="../logo.ico" />
+		<link rel="stylesheet" href="../css/hover-min.css" />
+		<link rel="stylesheet" href="../lib/slider/pgwslideshow.css" />
+		<link rel="stylesheet" type="text/less" href="../css/index/hotelDetails.less" />
+	</head>
+
+	<body>
+		<!--屏障-->
+		<div class="pingzhang"></div>
+		<!--header(头部)-->
+		<header id="header">
+				<div class="ban_c clearfix">
+					
+					<div class="header-left fl">	
+						<a class="logo" href="../index.html"><img src="../img/logo.png" /></a>
+					</div>
+					
+					<div class="header-middle fl">
+						<ul>
+							<li class="active">
+								<a href="WeddingTips.html">婚礼贴士</a>
+							</li>
+							<li>
+								<a href="SpecialOffers.html">优惠活动</a>
+							</li>
+							<li>
+								<a href="#">良辰吉日</a>
+							</li>
+							<li>
+								<a href="#">查找门店</a>
+							</li>
+							<li>
+								<a href="joinUs.html">加入我们</a>
+							</li>
+						</ul>
+						
+					</div>
+					<div class="header-right  fr">
+						<ul >
+							<li>
+								<a href="#">手机应用<img src="img/ewm.png" alt="二维码" /></a>
+							</li>
+							<li>
+								<a href="#">大嫁公众号<img src="img/ewm.png" alt="二维码" /></a>
+							</li>
+						</ul>
+		
+						<div class="search-bar">
+							<input placeholder="请输入要搜索的内容" class="fl" type="text" />
+							<a class="search-bar-fangdajing" href="#"><img src="img/fangdajin.png" alt="放大镜" /></a>
+						</div>
+					</div>
+				</div>
+		
+		</header>
+		<!--/header(头部)-->
+
+		<!--subnav(面包屑导航)-->
+		<div id="subnav-details">
+			<div class="ban_c">
+				<p>当前位置：
+					<a class="index" href="../index.html">首页</a>&gt;
+					<a class="hotel" href="hotelList.html">婚宴酒店</a>&gt;
+					<a class="hotel-name" href="javascript:;"></a>
+				</p>
+			</div>
+		</div>
+		<!--/subnav-->
+
+		<!--banner(横幅)-->
+		<section id="banner">
+			<!--轮播-->
+			<ul class="pgwSlideshow">
+				<!--<li><img src="../img/banner.png" alt="" /></li>
+				<li><img src="../img/banner1.jpg" alt="" /></li>
+				<li><img src="../img/banner2.jpg" alt="" /></li>
+				<li><img src="../img/banner.png" alt="" /></li>-->
+			</ul>
+			<div class="xiazai">
+				<a href="javascript:;">下载APP查看更多</a>
+			</div>
+		</section>
+
+		<!--/banner-->
+
+		<!--intro（简介）-->
+		<section id="intro">
+			<script type="text/template" id="hotel-intro">
+				<div class="ban_c">
+					<h3>酒店简介:</h3>
+					<p>酒店名: <span class="hotel-name"><%=response.hotelinfo.businessname%></span> 服务价：<span class="hotel-price">￥8888  起</span> 地址：<span><%=response.hotelinfo.address%></span></p>
+					<p class="intro-particulars">
+						简介：信息
+					</p>
+				</div>
+				</div>
+			</script>
+		</section>
+		<!--/intro（简介）-->
+
+		<!--combo(套餐)-->
+		<section id="combo">
+			<script type="text/template" id="hotel-combo">
+				<div class="ban_c">
+					<h3>套餐:</h3>
+					<ul>
+						<% for(var i=0;i<response.length;i++) { %>
+						<li class="clearfix">
+							<div class="combo-name fl">
+								<%=response[i].bigpackagename%>
+							</div>
+							<div class="combo-price fr">价格：
+								<%=response[i].packageprice%>起</div>
+						</li>
+						<% } %>
+					</ul>
+
+					<div class="combo_menu_content clearfix">
+
+					</div>
+				</div>
+			</script>
+		</section>
+
+		<!--/combo-->
+
+		<!--banquet（宴会厅）-->
+		<section id="banquet">
+			<script type="text/template" id="hotel-banquet">
+				<div class="ban_c clearfix">
+					<h3>宴会厅:</h3>
+					<ul>
+						<% for(var i=0; i<response.length;i++) { %>
+						<li id="<%=response[i].banquethallid%>">
+							<div class="listimg">
+								<% if(response[i].listimg == null) { %>
+								<img class="hotel-ul1-img" src='../../djweixin/img/hotel/hotel-title.png' />
+								<% } else{ %>
+								<img class="hotel-ul1-img" src='http://120.55.70.81:8088/dajiaserver/<%=response[i].listimg%>' alt="" />
+								<% } %>
+							</div>
+							<p><span><%=response[i].banquethallname%></span>￥4900</p>
+						</li>
+						<% } %>
+					</ul>
+
+					<div class="banquet-message">
+						<!--轮播-->
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<img src="../img/banner.png" alt="...">
+								</div>
+								<div class="item">
+									<img src="../img/banner.png" alt="...">
+								</div>
+								<div class="item">
+									<img src="../img/banner.png" alt="...">
+								</div>
+							</div>
+
+							<!-- Controls -->
+							<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only"></span>
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only"></span>
+							</a>
+						</div>
+						<div class="message">
+
+						</div>
+					</div>
+			</script>
+		</section>
+		<!--/banquet（宴会厅）-->
+
+		<!--footer(底部)-->
+		<footer id="footer">
+			
+			<div class="footer-top clearfix">
+				<div class="ban_c">
+					<div class="footer-title fl"><img src="../img/zt.png"/></div>
+					<div class="footer-top-right fr">
+						<img src="../img/ewm.png" alt="二维码" />
+						<p>大嫁公众号</p>
+					</div>
+					<div class="footer-top-left fr">
+						<img src="../img/ewm.png" alt="二维码" />
+						<p>下载APP</p>
+						<p>领奖励 邀好友 了解更多！</p>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p class="footer-bottom-p1">浙公网安备 33010602006275号</p>
+				<p class="footer-bottom-p2">copyright@2..2-2015 大嫁网婚礼会所 户ICO备0604456720 沪ICP证 备-20130044 上海市公安局宝山分局 备案编号 31456789</p>
+				<img src="../img/pinggu.png" alt="" />
+			</div>
+		</footer>
+		<!--/footer-->
+
+		<script src="../lib/less/less.min.js"></script>
+		<script src="../lib/Template/template-native.js"></script>
+		<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+		<script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script src="../lib/slider/pgwslideshow.min.js"></script>
+		<script src="../js/tool.js"></script>
+		<script>
+			$(function() {
+
+				//获取上一个页面上传过来的ID
+				var thisURL = document.URL;
+				var getval = thisURL.split('=');
+				var hotelId = getval.slice(-1).join();
+				
+				
+				
+				//酒店详情数据
+				$.ajax({
+					type: "post",
+					url: "http://120.55.70.81:8088/dajiaserver/Rest/shop/get_hotel_info",
+					data: { 'hotelId': hotelId },
+					async: true,
+					success: function(msg) {
+						//						console.log(msg.response.picture);
+						
+						$('.hotel-name').html(msg.response.hotelinfo.businessname);
+						if(msg.response.picture.length > 0) {
+							$('.pgwSlideshow li').detach();
+							for(var i = 0; i < msg.response.picture.length; i++) {
+								//								console.log(msg.response.picture[i]);
+								$('.pgwSlideshow').append('<li><img src="http://120.55.70.81:8088/dajiaserver/' + msg.response.picture[i] + '" alt="" /></li>');
+							}
+						}
+						//酒店详情数据渲染
+						var hotelIntro = template("hotel-intro", msg);
+						$('#intro').html(hotelIntro);
+						
+						//轮播图启动
+						$('.pgwSlideshow').pgwSlideshow({
+							"autoSlide": true
+						});
+
+					}
+				});
+
+				//酒店宴会厅列表数据
+				$.ajax({
+					type: "post",
+					url: "http://120.55.70.81:8088/dajiaserver/Rest/shop/get_banquet_hall_list",
+					data: { 'hotelId': hotelId },
+					async: true,
+					success: function(data) {
+						
+						//数据渲染
+						var hotelBanquet = template("hotel-banquet", data);
+						$('#banquet').html(hotelBanquet);
+
+						//显示
+						$('#banquet li').click(function() {
+							$('.banquet-message').fadeIn();
+							var banquetHallId = $(this).attr('id');
+							$.ajax({
+								type: "post",
+								url: "http://120.55.70.81:8088/dajiaserver/Rest/shop/get_banquet_hall_info",
+								data: { 'hotelId': hotelId, 'banquetHallId': banquetHallId },
+								async: true,
+								success: function(data) {
+									//console.log(data);	
+									$('#carousel-example-generic').carousel({
+										interval: 3000
+									});
+									var item;
+									//数据渲染
+									var banquetMessage = template("banquetMessage", data);
+									$('.message').html(banquetMessage);
+									//获取图片长度
+									if(data.response.picture.length > 0) {
+										//删除所有轮播图
+										$('.carousel-inner .item').detach();
+										//把返回的图片放入轮播容器中
+										for(var i = 0; i < data.response.picture.length; i++) {
+											$('.carousel-inner').append('<div class="item"><img src="http://120.55.70.81:8088/dajiaserver/' + data.response.picture[i] + '" alt="..."></div>');
+										}
+										//为第一个设置当前显示
+										$('.carousel-inner .item').eq(0).addClass('active');
+										//获取图片的数量并且设置到页数上
+										item = $('.carousel-inner .item').length;
+										var active = $('.carousel-inner .active').index() + 1;
+										$('.yeshu').text(active + '/' + data.response.picture.length);
+									} else {
+										//如果没有图片则设置为默认图
+										$('.item img').attr('src', '../img/banner.png');
+									}
+									//获取轮播图片的数量
+									item = $('.carousel-inner .item').length;
+									//监听轮播图事件，并设置页数跟随轮播动态设置
+									$('#carousel-example-generic').on('slide.bs.carousel', function() {
+										console.log("当前方法启动了");
+										var active = $('.carousel-inner .active').index() + 1;
+										console.log(active);
+										$('.yeshu').text(active + '/' + item);
+									});
+
+									//获取文档的高度并设置赋值给屏障背景
+									var eh = $(document).height();
+									$('.pingzhang').height(eh).css('display', 'block');
+									//关闭按钮
+									$('.close').click(function() {
+										$('.banquet-message').fadeOut();
+										$('#carousel-example-generic').carousel("pause");
+										$('.pingzhang').css('display', 'none');
+									});
+									//动态设置详情居中
+									var message = document.getElementsByClassName('banquet-message');
+									sc1(message);
+								}
+							});
+						});
+					}
+				});
+
+				//酒店套餐数据
+				$.ajax({
+					type: "post",
+					url: "http://120.55.70.81:8088/dajiaserver/Rest/shop/get_Package",
+					data: { 'hotelId': hotelId },
+					async: true,
+					success: function(data) {
+						//酒店套餐数据渲染
+						var hotelCombo = template("hotel-combo", data);
+						$('#combo').html(hotelCombo);
+
+						//菜单渲染
+						var comboMenuContent = $('.combo_menu_content');
+						//点击菜单事件
+						$('#combo li').click(function() {
+							//获取文档高度并且设置屏障高度，并让其显示
+							var eh = $(document).height();
+							$('.pingzhang').height(eh).css('display', 'block');
+							$('.combo_menu_content').css('display', 'block');
+							//获取当前下的序号
+							var index = $(this).index();
+							//菜单的渲染
+							var menu2 = template("menu", data.response[index]);
+							comboMenuContent.html(menu2);
+							//点击旁边隐藏
+							$('.pingzhang').click(function() {
+								comboMenuContent.css('display', 'none');
+								$(this).css('display', 'none');
+								$('.banquet-message').css('display', 'none');
+							});
+							//当套餐大于2个时宽度变为一半
+							if(data.response[index].smallpackagelist.length > 1) {
+								$('#combo .combo_menu_content .menu_content').width('50%');
+							}
+							var menu = document.getElementsByClassName('combo_menu_content');
+							sc1(menu);
+						});
+					}
+				});
+				//设置详情居中方法
+				function sc1(DivId) {
+
+					var t = $(DivId).css('top');
+					var l = $(DivId).css('left');
+					//获取定位位置
+					//					console.log('t=' + t);
+					//					console.log('l=' + l);
+
+					var st = $(document).scrollTop();
+					var sl = $(document).scrollLeft();
+					//获取滚动上去那部分
+					//					console.log('st=' + st);
+					//					console.log('sl=' + sl);
+
+					var ch = document.documentElement.clientHeight;
+					var cw = document.documentElement.clientWidth;
+					//可见屏幕大小
+					//					console.log('ch=' + ch);
+					//					console.log('cw=' + cw);
+
+					var ot = $(DivId).offset().top;
+					var ol = $(DivId).offset().left;
+					//距离文档左边跟上边的距离
+					//					console.log('ot=' + ot);
+					//					console.log('ol=' + ol);
+
+					var w = $(DivId).width();
+					var h = $(DivId).height();
+					//对象的高度和宽度
+					//					console.log('w=' + w);
+					//					console.log('h=' + h);
+
+					var top = st + (ch - h) / 2;
+					var left = sl + (cw - w) / 2;
+
+					//					console.log(top);
+					//					console.log(left);
+
+					$(DivId).css('top', top);
+					$(DivId).css('left', left);
+					//alert($(DivId).style.top); 
+				}
+			});
+		</script>
+		<!--详情模板-->
+		<script type="text/template" id="banquetMessage">
+			<h3><%=response.banquet_hall.banquethallname%></h3>
+			<table>
+				<tr>
+					<td>立柱</td>
+					<td>
+						<%=response.banquet_hall.columns%>
+					</td>
+					<td>形状</td>
+					<td>
+						<%=response.banquet_hall.shape%>
+					</td>
+					<td>化妆间</td>
+					<% if(response.banquet_hall.dressingroom == 1){ %>
+					<td>是</td>
+					<% } else { %>
+					<td>否</td>
+					<% } %>
+					<td>面积</td>
+					<td>
+						<%=response.banquet_hall.areacovered%>
+					</td>
+					<td>最大桌数</td>
+					<td>
+						<%=response.banquet_hall.tablemax%>
+					</td>
+				</tr>
+				<tr>
+					<td>是否独立</td>
+					<% if(response.banquet_hall.isindependent == 1){ %>
+					<td>是</td>
+					<% } else{ %>
+					<td>否</td>
+					<% } %>
+					<td>最低消费</td>
+					<td>
+						<%=response.banquet_hall.minimumconsumption%>
+					</td>
+					<td>楼层</td>
+					<td>
+						<%=response.banquet_hall.floor%>
+					</td>
+					<td>层高</td>
+					<td>
+						<%=response.banquet_hall.storey%>
+					</td>
+					<td>最小桌数</td>
+					<td>
+						<%=response.banquet_hall.tablemin%>
+					</td>
+				</tr>
+			</table>
+			<span class="yeshu">1/8</span>
+			</div>
+			<img class="close" src="../img/c.png" alt="关闭" />
+		</script>
+		<!--菜单模板-->
+		<script type="text/template" id="menu">
+			<img src="../img/menu.png" alt="" />
+			<% for(var i=0;i<smallpackagelist.length;i++) { %>
+			<div class="menu_content clearfix fl">
+				<dt><%=smallpackagelist[i].smallpackagename%>套餐</dt>
+				<% for(var j=0;j<smallpackagelist[i].smallpackageinfo.length;j++) { %>
+				<dd>
+					<%=smallpackagelist[i].smallpackageinfo[j]%>
+				</dd>
+				<% } %>
+			</div>
+			<% } %>
+			<p class="clearfix">温馨提示：以上内容仅为参考，实际价格以酒店实价为准</p>
+			<img src="../img/huawendibu.png" alt="" />
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,168 @@
+@import "base.less";
+@import "index.less";
+
+
+/*婚车列表开始*/
+#weddingcar{
+    margin-top: 30px;
+    ul {
+        overflow: hidden;
+        width: 100%;
+        li {
+            cursor: pointer;
+            background-color: #FFFFFF;
+            float: left;
+            width: 23.5%;
+            margin-right: 2%;
+            border: 1px solid #bababb;
+            border-top: none;
+            margin-bottom: 30px;
+            color:#bbbbbb;
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            h3{
+                padding: 18px 0;
+                text-align: center;
+                font-size: 20px;
+            }
+            p {   
+                padding-left: 38px;
+                margin-bottom:8px;
+                span{
+                    text-align: center;
+                    display: inline-block;
+//                  width: 32%;
+                    font-size: 18px;
+                    border-right: 1px solid #bbbbbb;
+                    &:first-child{
+                        padding-right: 10px;
+                        i{
+                            position: relative;
+                            left: -4px;
+                            display: inline-block;
+                            width: 23px;
+                            height: 25px;
+                            background: url(../../../djweixin/img/hotel/liulan.png) no-repeat left 100%;
+                            background-size: contain;
+                        }
+                    }
+                    &:last-child{
+                        border-right: none;
+                    }
+                }
+                .jq{
+                    border-right: none;
+                    color:#F05053;
+                    padding-left:10px;
+                    padding-right:10px;
+                }
+                .licheng{
+                    
+                }
+
+            }
+            
+        }
+    }
+}
+//面包屑导航
+#subnav{
+    p{
+        padding: 20px 0;
+        color:#9b9b9b;
+        font-size: 18px;
+        a.index{
+            color:#9b9b9b;
+        }
+        a.hotel{
+           color:#F05053; 
+        }
+    }
+    h2{
+        font-size: 30px;
+    }
+}
+
+
+//筛选开始
+#filtrate{
+    margin-top: 30px;
+    color:#7B7B7B;
+    .area,.price,.pp{
+        padding-left: 30px;
+        background-color: #FFFFFF;
+        border-bottom: 1px dashed #c6c6c6;
+        height: 70px;
+        line-height: 70px;
+        h3{   
+            display: inline-block;
+            background: url(../../img/wz.png) no-repeat left center;
+            font-size: 24px;
+            margin-right: 44px;
+            padding-left:36px;
+        }
+        ul{
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: bottom;
+            li{
+                
+                cursor: pointer;
+                font-size: 18px;
+                float: left;
+                margin-right: 26px;
+                &:first-child{
+                    color: #F05053;
+                }
+                &:hover{
+                    color: #F05053;
+                }
+            }
+        }
+        
+    }
+    .price{
+//      border-bottom:none;
+        h3{
+            display: inline-block;
+             background: url(../../img/jg.png) no-repeat left center;
+            padding-left:40px;
+            font-size: 24px;
+            margin-right: 44px;
+        }
+    }
+    .pp{
+        height: 121px;
+        line-height: 121px;
+        border-bottom:none;
+        h3{
+            display: inline-block;
+             background: url(../../img/pp.png) no-repeat left center;
+            padding-left:40px;
+            font-size: 24px;
+            margin-right: 44px;
+        }
+        ul{
+            width: 89%;
+            li{
+                height: 56px;
+                line-height: 56px;
+            }
+        }
+    }
+
+}
+
+//筛选结束
+
+/*婚车列表结束*/
+
+
+
+
+

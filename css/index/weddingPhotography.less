@@ -1,0 +1,220 @@
+@import "base.less";
+@import "index.less";
+@import "hotelList.less";
+@import "hotelDetails.less";
+@import "weddingDresses.less";
+
+/*婚纱摄影列表开始*/
+
+#subnav{
+    p{
+        padding:1% 0 0 0;
+    }
+}
+
+#case {
+//  position: relative;
+    margin-top: 30px;
+    h3 {
+        font-size: 30px;
+        color: #f05053;
+        margin-bottom: 30px;
+    }
+    ul {
+        overflow: hidden;
+        width: 100%;
+        li {
+            overflow: hidden;
+            cursor: pointer;
+            background-color: #FFFFFF;
+            float: left;
+            width: 48%;
+            margin-right: 2%;
+            border: 1px solid #bababb;
+            border-top: none;
+            margin-bottom: 30px;
+            color: #bbbbbb;
+            border-radius: 10px;
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            p {
+                font-size: 20px;
+                text-align: center;
+                padding: 2% 0;
+                margin-right: 30px;
+                color: #4b4b4b;
+            }
+
+        }
+    }
+    .case-Details{
+        display: none;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 15%;
+        top: 15%;
+        width: 70%;
+        margin: 0 auto;
+        z-index: 999;
+        img.close{
+            color: #FFFFFF;
+           position: absolute; 
+           top: 0;
+           right: 0;
+        }
+        h3{
+            font-size: 20px;
+            color: #4b4b4b;
+            padding: 2% 0 1% 2%;
+            margin: 0;
+        }
+        p{
+            font-size: 16px;
+            padding: 1% 0 2% 2%;
+        }
+        .yeshu{
+            font-size: 16px;
+            position: absolute;
+            bottom:2%;
+            right: 2%;
+        }
+        .carousel{
+//          width: 100%;
+            border-radius: 10px;
+            .carousel-inner{
+                border-radius: 10px 10px 0 0;
+            }
+            .carousel-control.left{
+                 font-size: 20px;
+                border-radius: 10px 10px 0 0;
+            }
+            .carousel-control.right{
+                font-size: 20px;
+                border-radius: 10px 10px 0 0;
+            }
+            .glyphicon-chevron-left:before, .glyphicon-chevron-right:before{
+                font-size: 40px;
+            }
+        }
+    }
+}
+/*婚纱摄影列表结束*/
+
+/*婚纱摄影详情开始*/
+
+#combo{
+    padding: 2% 0;
+    h3 {
+        font-size: 30px;
+        color: #f05053;
+        margin-bottom: 30px;
+    }
+    ul {
+        li {
+            cursor: pointer;
+            float: left;
+            width: 48%;
+            height: 100%;
+            line-height: 100%;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            padding: 0;
+            border: 1px solid #8A8A8A;
+            border-top: none;
+            background-color: #FFFFFF;
+            font-size: 20px;
+            &::nth-child(2n) {
+                margin-right: 0;
+            }
+            .listimg {
+                width: 100%;
+                height: 478px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            p {
+                text-align: center;
+                padding: 2% 0;
+                color: #F05053;
+                span {
+                    padding: 0 30px;
+                    border-right: 1px solid #7B7B7B;
+                    margin-right: 30px;
+                    color: #4b4b4b;
+                }
+            }
+        }
+    }
+    .combo-message {
+        display: none;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 15%;
+        top: 15%;
+        width: 70%;
+        margin: 0 auto;
+        z-index: 999;
+        img.close {
+            color: #FFFFFF;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .message {
+            
+            h3 {
+                font-size: 20px;
+                color: #4b4b4b;
+                padding: 2% 0 1% 2%;
+                margin: 0;
+            }
+            p{
+                padding: 1% 0 1% 2%;
+            }
+            table {
+                font-size: 14px;
+                margin:0 2%;
+                margin-bottom: 3%;
+                td {
+                    width: 11%;
+                }
+            }
+            .yeshu {
+                font-size: 16px;
+                position: absolute;
+                bottom: 2%;
+                right: 2%;
+            }
+        }
+        .carousel {
+            //          width: 100%;
+            border-radius: 10px;
+            .carousel-inner {
+                border-radius: 10px 10px 0 0;
+            }
+            .carousel-control.left {
+                font-size: 20px;
+                border-radius: 10px 10px 0 0;
+            }
+            .carousel-control.right {
+                font-size: 20px;
+                border-radius: 10px 10px 0 0;
+            }
+            .glyphicon-chevron-left:before,
+            .glyphicon-chevron-right:before {
+                font-size: 40px;
+            }
+        }
+    }
+}
+/*婚纱摄影详情结束*/
