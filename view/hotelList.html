@@ -135,7 +135,7 @@
 						<% for(var i = 0 ;i < response.length;i++) { %>
 						<li id="<%=response[i].hotelid%>">
 							<div class="listimg">
-								<% if(response[i].applistimg == '') { %>
+								<% if(response[i].weblistimg == '') { %>
 								<img class="hotel-ul1-img" src='../../djweixin/img/hotel/hotel-title.png' />
 								<% } else{ %>
 								<img class="hotel-ul1-img" src='http://120.55.70.81:8088/dajiaserver/<%=response[i].weblistimg%>'> />
@@ -164,7 +164,6 @@
 
 		<!--footer(底部)-->
 		<footer id="footer">
-
 			<div class="footer-top clearfix">
 				<div class="ban_c">
 					<div class="footer-title fl"><img src="../img/zt.png" /></div>

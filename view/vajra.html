@@ -213,8 +213,7 @@
 		<script src="../lib/Template/template-native.js"></script>
 		<script type="text/template" id="template">
 			<% for(var i = 0 ;i < 5;i++) { %>
-			<section id=<%=items[i]%> name=
-				<%=items[i]%>>
+				<section id=<%=items[i]%> name=<%=items[i]%>>
 				<div class="ban_c">
 					<div class="main-content-top clearfix">
 						<div class="main-content-top-left fl">
@@ -226,77 +225,18 @@
 						</div>
 					</div>
 					<div class="main-content-bottom clearfix">
-						<div class="main-content-bottom-top">
+						<div class="main-content-bottom-top clearfix">
 							<ul>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="../img/pic1.png" alt="大图" />
-										<p>
-											<%=describe1 %>
-										</p>
-										<p>
-											<%=describe2 %>
-										</p>
-									</a>
-								</li>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="../img/pic1.png" alt="大图" />
-										<p>
-											<%=describe1 %>
-										</p>
-										<p>
-											<%=describe2 %>
-										</p>
-									</a>
-								</li>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="../img/pic1.png" alt="大图" />
-										<p>
-											<%=describe1 %>
-										</p>
-										<p>
-											<%=describe2 %>
-										</p>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="main-content-bottom-bottom">
-							<ul>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="../img/pic2.png" alt="小图" />
-										<p>
-											<%=describe1 %>
-										</p>
-									</a>
-								</li>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="../img/pic2.png" alt="小图" />
-										<p>
-											<%=describe1 %>
-										</p>
-									</a>
-								</li>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="../img/pic2.png" alt="小图" />
-										<p>
-											<%=describe1 %>
-										</p>
-									</a>
-								</li>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="../img/pic2.png" alt="小图" />
-										<p>
-											<%=describe1 %>
-										</p>
-									</a>
-								</li>
+								<% for(var j=0;j<7; j++) { %>
+									<li>
+										<a href="#">
+											<div class="tt"><img src="../img/datu.png" alt="大图" /></div>
+											<p>
+												<%=describe1 %>
+											</p>
+										</a>
+									</li>
+								<% } %>
 							</ul>
 						</div>
 					</div>

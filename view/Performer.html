@@ -127,12 +127,12 @@
 						<% for(var i = 0 ;i < response.length;i++) { %>
 						<li id="<%=response[i].actorid%>">
 							<div class="listimg">
-								<% if(response[i].applistimg == '') { %>
+								<% if(response[i].weblistimg == '') { %>
 								<img class="hotel-ul1-img" src='../../djweixin/img/hotel/hotel-title.png' />
 
 								<% } else{ %>
 
-								<img class="hotel-ul1-img" src='http://120.55.70.81:8088/dajiaserver/<%=response[i].applistimg%>' />
+								<img class="hotel-ul1-img" src='http://120.55.70.81:8088/dajiaserver/<%=response[i].weblistimg%>' />
 								<% } %>
 							</div>
 							<h3><%=response[i].studioname%></h3>
@@ -150,37 +150,9 @@
 		<!--hotel-content(酒店内容结束)-->
 
 		<!--pages(分页)-->
-		<!--<nav class="text-center">
-			<ul class="pagination">
-				<li>
-					<a href="javascript:;" id="Previous" aria-label="Previous">
-						<span aria-hidden="true"></span>
-					</a>
-				</li>
-				<li class="active">
-					<a href="javascript:;">1</a>
-				</li>
-				<li>
-					<a href="javascript:;">2</a>
-				</li>
-				<li>
-					<a href="javascript:;">3</a>
-				</li>
-				<li>
-					<a href="javascript:;">4</a>
-				</li>
-				<li>
-					<a href="javascript:;">5</a>
-				</li>
-				<li>
-					<a href="javascript:;" id="Next" aria-label="Next">
-						<span aria-hidden="true"></span>
-					</a>
-				</li>
-			</ul>
-		</nav>
-		-->
-
+		<div class="fy clearfix">
+			<div id="page" class="page_div"></div>
+		</div>
 		<!--/pages-->
 
 		<!--footer(底部)-->
@@ -211,30 +183,134 @@
 		<script src="../lib/less/less.js"></script>
 		<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
 		<script src="../lib/Template/template-native.js"></script>
-
+		<script src="../lib/page/paging.js"></script>
 		<script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script src="../js/tool.js"></script>
 		<script>
 			$(function() {
-
 				var newData = {
-					"page": 1
+					"page": 1,
+					"district": '',
+					"price": ''
 				}
-				$.ajax({
-					type: "post",
-					url: "http://120.55.70.81:8088/dajiaserver/Rest/shop/get_actor_list",
-					data: newData,
-					async: true,
-					success: function(data) {
-						console.log(data);
-						var weddingDressesHtml = template("Dresses", data);
-						$('#weddingDresses').html(weddingDressesHtml);
-						$('#weddingDresses li').on('click', function() {
-							var id = $(this).attr('id');
-							window.location.href = "perfrmerDetails.html?id=" + id;
-						});
+				//	var area_li, price_li, star_li;
+				getdata(newData);
+
+				$('#filtrate .area li').on('click', function() {
+					$(this).siblings().css('color', '#7B7B7B');
+					$(this).css('color', '#F05053');
+					newData.district = $(this).text();
+					if($(this).text() == "全部") {
+						newData.district = ''
 					}
+					window.sessionStorage.setItem('num', 1);
+					newData.page = 1;
+					getMsg(newData);
 				});
+				$('#filtrate .price li').on('click', function() {
+					$(this).siblings().css('color', '#7B7B7B');
+					$(this).css('color', '#F05053');
+					newData.price = $(this).text();
+					if($(this).text() == '2000以下') {
+						newData.price = 2000;
+					}
+					if($(this).text() == '6000以上') {
+						newData.price = 6000;
+					}
+					if($(this).text() == "全部") {
+						newData.price = ''
+					}
+					window.sessionStorage.setItem('num', 1);
+					newData.page = 1;
+					getMsg(newData);
+				});
+
+				//获取数据
+				function getMsg(newData) {
+					newData = newData;
+					if(!(newData.district == '')) {
+						newData.district = newData.district;
+						if(!(newData.price == '')) {
+							newData.price = newData.price;
+						}
+						if(!(newData.starsort == '')) {
+							newData.starsort = newData.starsort;
+						}
+					} else if(!(newData.price == '')) {
+						newData.price = newData.price;
+						if(!(newData.starsort == '')) {
+							newData.starsort = newData.starsort;
+						}
+					}
+					getdata(newData);
+				}
+
+				//获取后台数据方法
+				function getdata(newData) {
+					$.ajax({
+						type: "post",
+						url: "http://120.55.70.81:8088/dajiaserver/Rest/web/get_actor_list",
+						datatype: 'json',
+						data: newData,
+						async: true,
+						success: function(data) {
+
+							var weddingDressesHtml = template("Dresses", data);
+							$('#weddingDresses').html(weddingDressesHtml);
+							
+							var data1 = JSON.stringify(data);
+							window.sessionStorage.setItem('hotelList', data1);
+							if(data.response.length >= 1) {
+								if(data.response[0].num % 9){
+									window.sessionStorage.setItem('pages', parseInt(data.response[0].num / 9)+1);
+								}
+								if(parseInt(data.response[0].num / 9) <= 0) {
+									$('.fy').css('display', 'none');
+								} else {
+									$('.fy').css('display', 'block');
+								}
+
+								//分页
+								$("#page").paging({
+									pageNo: 1,
+									totalPage: parseInt(data.response[0].num / 9)+1,
+									totalSize: 300,
+									callback: function(num) {
+										newData.page = num;
+										$.ajax({
+											type: "post",
+											url: "http://120.55.70.81:8088/dajiaserver/Rest/web/get_actor_list",
+											data: newData,
+											async: true,
+											success: function(data) {
+												var data1 = JSON.stringify(data);
+												window.sessionStorage.setItem('hotelList', data1);
+												if(data.response[0].num % 9){
+													window.sessionStorage.setItem('pages', parseInt(data.response[0].num / 9));
+												}
+												window.sessionStorage.setItem('num', num);
+
+												
+												var weddingDressesHtml = template("Dresses", data);
+												$('#weddingDresses').html(weddingDressesHtml);
+												
+												$('#weddingDresses li').on('click', function() {
+													var id = $(this).attr('id');
+													window.location.href = "EmceeDetails.html?id=" + id;
+												});
+											}
+										});
+									}
+								})
+
+							} else {
+								$('.fy').css('display', 'none');
+							} //分页功能
+
+						}
+					});
+				}
+
 			});
 		</script>
 	</body>
