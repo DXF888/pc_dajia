@@ -45,16 +45,16 @@
 					<div class="header-right  fr">
 						<ul >
 							<li>
-								<a href="#">手机应用<img src="img/ewm.png" alt="二维码" /></a>
+								<a href="#">手机应用<img src="../img/ewm.png" alt="二维码" /></a>
 							</li>
 							<li>
-								<a href="#">大嫁公众号<img src="img/ewm.png" alt="二维码" /></a>
+								<a href="#">大嫁公众号<img src="../img/ewm.png" alt="二维码" /></a>
 							</li>
 						</ul>
 		
 						<div class="search-bar">
 							<input placeholder="请输入要搜索的内容" class="fl" type="text" />
-							<a class="search-bar-fangdajing" href="#"><img src="img/fangdajin.png" alt="放大镜" /></a>
+							<a class="search-bar-fangdajing" href="#"><img src="../img/fangdajin.png" alt="放大镜" /></a>
 						</div>
 					</div>
 				</div>
@@ -66,7 +66,7 @@
 		<div id="subnav-details">
 			<div class="ban_c">
 				<p>当前位置：
-					<a class="index" href="../index.html">首页</a>&gt;
+					<a class="index" href="vajra.html">首页</a>&gt;
 					<a class="hotel" href="vajra.html">四大金刚</a>&gt;
 					<a class="hotel-name" href="javascript:;"></a>
 				</p>
@@ -162,15 +162,16 @@
 
 		<!--/combo-->
 
-		<!--case(案例)-->
+		<!--case(视频)-->
 		<section id="case">
 			<script type="text/template" id="case-content">
 				<div class="ban_c">
 					<h3>视频：</h3>
 					<ul>
 						<% for(var i=0;i<response.length;i++){ %>
-						<li id='<%=response[i].caseid%>'>
+						<li class="video">
 							<img src="http://120.55.70.81:8088/dajiaserver/<%=response[i].listimg%>" alt="" />
+							<img class="bf" src="../img/bf_79.png" alt="" />
 							<p>
 								<%=response[i].name%>
 							</p>
@@ -179,7 +180,13 @@
 					</ul>
 
 					<div class="case-Details">
-						
+						<video width="320" height="240" controls="controls">
+						  <source src="" type="video/mp4" />
+						  <object data="movie.mp4" width="320" height="240">
+						    <embed src="../../video/jqueryPoPlayer/videos/flowplayer.controls-3.1.1.swf" width="320" height="240" />
+						  </object>
+						</video>
+						<img class="close" src="../img/c.png" alt="关闭" />
 					</div>
 				</div>
 			</script>
@@ -243,12 +250,12 @@
 						if(msg.response.picture.length > 0) {
 							$('.pgwSlideshow li').detach();
 							for(var i = 0; i < msg.response.picture.length; i++) {
-								console.log(msg.response.picture[i]);
+//								console.log(msg.response.picture[i]);
 								$('.pgwSlideshow').append('<li><img src="http://120.55.70.81:8088/dajiaserver/' + msg.response.picture[i] + '" alt="" /></li>');
 							}
 						}
 						//婚纱摄影详情简介数据渲染
-						//						console.log(msg);
+						//console.log(msg);
 						var introContent = template("intro-content", msg);
 						$('#intro').html(introContent);
 
@@ -281,7 +288,7 @@
 								data: { 'emceeid': emceeid,'packageid':packageid},
 								async: true,
 								success: function(data) {
-									console.log(data);
+//									console.log(data);
 									//数据渲染
 									var comboMessage = template("comboMessage", data);
 									$('#combo .message').html(comboMessage);
@@ -333,44 +340,31 @@
 				$.ajax({
 					type: "post",
 					url: "http://120.55.70.81:8088/dajiaserver/Rest/shop/get_emcee_vedio_list",
-					data: { 'weddingphotographyid': emceeid },
+					data: { 'emceeid': emceeid },
 					async: true,
 					success: function(data) {
-						//						console.log(data);
+						console.log(data);
 						//数据渲染
 						var caseContent = template("case-content", data);
 						$('#case').html(caseContent);
-
-						//显示
-						$('#case li').click(function() {
+						
+						$('.video').on('click',function(){
+								console.log("视频播放");
+							//获取文档的高度并设置赋值给屏障背景
 							$('.case-Details').fadeIn();
-							var caseid = $(this).attr('id');
-							$.ajax({
-								type: "post",
-								url: "http://120.55.70.81:8088/dajiaserver/Rest/shop/get_wedding_case_info",
-								data: { 'caseid': caseid },
-								async: true,
-								success: function(data) {
-									//数据渲染
-									var caseMessage = template("caseMessage", data);
-									$('#case .message').html(caseMessage);
-
-									//获取文档的高度并设置赋值给屏障背景
 									var eh = $(document).height();
 									$('.pingzhang').height(eh).css('display', 'block');
+									console.log(data.response[0].link);
+									$('source').attr('src',data.response[0].link);
 									//关闭按钮
 									$('.close').click(function() {
-										$('.case-Details').fadeOut();
-										$('.pingzhang').css('display', 'none');
+										close_Slider('#carousel-example-generic1','.pingzhang');
 									});
 									$('.pingzhang').click(function() {
-										$('.case-Details').css('display', 'none');
-										$(this).css('display', 'none');
+										close_Slider('#carousel-example-generic1','.pingzhang');
 									});
-									var message = document.getElementsByClassName('case-Details');
+									var message = document.getElementsByClassName('combo-message');
 									sc1(message);
-								}
-							});
 						});
 					}
 				});

@@ -4,7 +4,6 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>大嫁网</title>
-		<link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.css" />
 		<link rel="shortcut icon" type="image/x-icon" href="../logo.ico" />
 		<link rel="stylesheet" type="text/less" href="../css/index/hotelList.less" />
 	</head>
@@ -13,49 +12,49 @@
 
 		<!--header(头部)-->
 		<header id="header">
-				<div class="ban_c clearfix">
-					
-					<div class="header-left fl">	
-						<a class="logo" href="../index.html"><img src="../img/logo.png" /></a>
-					</div>
-					
-					<div class="header-middle fl">
-						<ul>
-							<li class="active">
-								<a href="WeddingTips.html">婚礼贴士</a>
-							</li>
-							<li>
-								<a href="SpecialOffers.html">优惠活动</a>
-							</li>
-							<li>
-								<a href="#">良辰吉日</a>
-							</li>
-							<li>
-								<a href="#">查找门店</a>
-							</li>
-							<li>
-								<a href="joinUs.html">加入我们</a>
-							</li>
-						</ul>
-						
-					</div>
-					<div class="header-right  fr">
-						<ul >
-							<li>
-								<a href="#">手机应用<img src="img/ewm.png" alt="二维码" /></a>
-							</li>
-							<li>
-								<a href="#">大嫁公众号<img src="img/ewm.png" alt="二维码" /></a>
-							</li>
-						</ul>
-		
-						<div class="search-bar">
-							<input placeholder="请输入要搜索的内容" class="fl" type="text" />
-							<a class="search-bar-fangdajing" href="#"><img src="img/fangdajin.png" alt="放大镜" /></a>
-						</div>
+			<div class="ban_c clearfix">
+
+				<div class="header-left fl">
+					<a class="logo" href="../index.html"><img src="../img/logo.png" /></a>
+				</div>
+
+				<div class="header-middle fl">
+					<ul>
+						<li class="active">
+							<a href="WeddingTips.html">婚礼贴士</a>
+						</li>
+						<li>
+							<a href="SpecialOffers.html">优惠活动</a>
+						</li>
+						<li>
+							<a href="#">良辰吉日</a>
+						</li>
+						<li>
+							<a href="#">查找门店</a>
+						</li>
+						<li>
+							<a href="joinUs.html">加入我们</a>
+						</li>
+					</ul>
+
+				</div>
+				<div class="header-right  fr">
+					<ul>
+						<li>
+							<a href="#">手机应用<img src="../img/ewm.png" alt="二维码" /></a>
+						</li>
+						<li>
+							<a href="#">大嫁公众号<img src="../img/ewm.png" alt="二维码" /></a>
+						</li>
+					</ul>
+
+					<div class="search-bar">
+						<input placeholder="请输入要搜索的内容" class="fl" type="text" />
+						<a class="search-bar-fangdajing" href="#"><img src="../img/fangdajin.png" alt="放大镜" /></a>
 					</div>
 				</div>
-		
+			</div>
+
 		</header>
 		<!--/header(头部)-->
 
@@ -135,17 +134,17 @@
 					<ul>
 						<% for(var i = 0 ;i < response.length;i++) { %>
 						<li id="<%=response[i].hotelid%>">
-								<div class="listimg">
-							<% if(response[i].applistimg == '') { %>
-									<img class="hotel-ul1-img" src='../../djweixin/img/hotel/hotel-title.png' />
-							<% } else{ %>
-									<img class="hotel-ul1-img" src='http://120.55.70.81:8088/dajiaserver/<%=response[i].weblistimg%>'> />
-							<% } %>
-								</div>
+							<div class="listimg">
+								<% if(response[i].applistimg == '') { %>
+								<img class="hotel-ul1-img" src='../../djweixin/img/hotel/hotel-title.png' />
+								<% } else{ %>
+								<img class="hotel-ul1-img" src='http://120.55.70.81:8088/dajiaserver/<%=response[i].weblistimg%>'> />
+								<% } %>
+							</div>
 							<h3><%=response[i].businessname%></h3>
 							<p>
 								<span class="lr"><i></i><%=response[i].visit%></span>
-								<span class="xj">四星级</span>
+								<span class="xj"><%=response[i].starsort%></span>
 								<span class='jq'>￥<%=response[i].pricemin%></span>
 							</p>
 						</li>
@@ -158,43 +157,17 @@
 		<!--hotel-content(酒店内容结束)-->
 
 		<!--pages(分页)-->
-		<nav class="text-center">
-			<ul class="pagination">
-				<li>
-					<a href="javascript:;" id="Previous" aria-label="Previous">
-						<span aria-hidden="true"></span>
-					</a>
-				</li>
-				<li class="active">
-					<a href="javascript:;">1</a>
-				</li>
-				<li>
-					<a href="javascript:;">2</a>
-				</li>
-				<li>
-					<a href="javascript:;">3</a>
-				</li>
-				<li>
-					<a href="javascript:;">4</a>
-				</li>
-				<li>
-					<a href="javascript:;">5</a>
-				</li>
-				<li>
-					<a href="javascript:;" id="Next" aria-label="Next">
-						<span aria-hidden="true"></span>
-					</a>
-				</li>
-			</ul>
-		</nav>
+		<div class="fy clearfix">
+			<div id="page" class="page_div"></div>
+		</div>
 		<!--/pages-->
 
 		<!--footer(底部)-->
 		<footer id="footer">
-			
+
 			<div class="footer-top clearfix">
 				<div class="ban_c">
-					<div class="footer-title fl"><img src="../img/zt.png"/></div>
+					<div class="footer-title fl"><img src="../img/zt.png" /></div>
 					<div class="footer-top-right fr">
 						<img src="../img/ewm.png" alt="二维码" />
 						<p>大嫁公众号</p>
@@ -217,11 +190,11 @@
 		<script src="../lib/less/less.js"></script>
 		<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
 		<script src="../lib/Template/template-native.js"></script>
-
-		<script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script src="../js/tool.js"></script>
 		<script src="../js/hotelList.js"></script>
+		<script src="../lib/page/paging.js"></script>
 		<script>
+		
 		</script>
 	</body>
 

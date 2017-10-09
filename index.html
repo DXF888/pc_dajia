@@ -3,6 +3,8 @@
 
 	<head>
 		<meta charset="utf-8" />
+		<meta name="Keywords" content="结婚,结婚网,婚博会,婚庆网,杭州结婚,杭州结婚网,杭州婚博会,杭州婚庆网"/>
+		<meta name="Description" content="大嫁网婚礼是国内领先的结婚预订平台,丰富的结婚预订经验,免费为新人提供杭州婚宴酒店预订、婚庆等服务,是新人必上的结婚网! "/>
 		<title>大嫁网</title>
 		<link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.css" />
 		<link rel="shortcut icon" type="image/x-icon" href="logo.ico" />
@@ -64,14 +66,14 @@
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
-					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
 				</ol>
 
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
-					<div class="item active">
+					<!--<div class="item active">
 						<img src="img/banner.png" alt="...">
 					</div>
 					<div class="item">
@@ -79,7 +81,7 @@
 					</div>
 					<div class="item">
 						<img src="img/banner.png" alt="...">
-					</div>
+					</div>-->
 				</div>
 
 				<!-- Controls -->
@@ -373,9 +375,8 @@
 		<script src="lib/jQuery/jquery-3.2.1.min.js"></script>
 		<script src="lib/Template/template-native.js"></script>
 		<script type="text/template" id="template">
-			<% for(var i = 0 ;i < 7;i++) { %>
-			<section id=<%=items[i]%> name=
-				<%=items[i]%>>
+			<% for(var i = 0 ;i < items.length;i++) { %>
+			<section id=<%=items[i]%> name=<%=items[i]%>>
 				<div class="ban_c">
 					<div class="main-content-top clearfix">
 						<div class="main-content-top-left fl">
@@ -387,77 +388,18 @@
 						</div>
 					</div>
 					<div class="main-content-bottom clearfix">
-						<div class="main-content-bottom-top">
+						<div class="main-content-bottom-top clearfix">
 							<ul>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="img/datu.png" alt="大图" />
-										<p>
-											<%=describe1 %>
-										</p>
-										<p>
-											<%=describe2 %>
-										</p>
-									</a>
-								</li>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="img/datu.png" alt="大图" />
-										<p>
-											<%=describe1 %>
-										</p>
-										<p>
-											<%=describe2 %>
-										</p>
-									</a>
-								</li>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="img/datu.png" alt="大图" />
-										<p>
-											<%=describe1 %>
-										</p>
-										<p>
-											<%=describe2 %>
-										</p>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="main-content-bottom-bottom">
-							<ul>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="img/datu.png" alt="大图" />
-										<p>
-											<%=describe1 %>
-										</p>
-									</a>
-								</li>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="img/datu.png" alt="大图" />
-										<p>
-											<%=describe1 %>
-										</p>
-									</a>
-								</li>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="img/datu.png" alt="大图" />
-										<p>
-											<%=describe1 %>
-										</p>
-									</a>
-								</li>
-								<li class="hvr-float-shadow">
-									<a href="#">
-										<img src="img/datu.png" alt="大图" />
-										<p>
-											<%=describe1 %>
-										</p>
-									</a>
-								</li>
+								<% for(var j=0;j<7; j++) { %>
+									<li>
+										<a href="#">
+											<div class="tt"><img src="img/datu.png" alt="大图" /></div>
+											<p>
+												<%=describe1 %>
+											</p>
+										</a>
+									</li>
+								<% } %>
 							</ul>
 						</div>
 					</div>
@@ -465,21 +407,42 @@
 			</section>
 			<% } %>
 		</script>
-		<script type="text/javascript">
+	
+
+		<script src="js/index.js"></script>
+		<script src="js/tool.js"></script>
+		<script>
+			$(function(){
+				//轮播图数据获取
+				$.ajax({
+					type:"post",
+					url:"http://120.55.70.81:8088/dajiaserver/Rest/web/get_recommend_head",
+					async:true,
+					success:function(data){
+						$(data.response).each(function(index,value){
+							$('.carousel-inner').append('<div class="item"><img src="http://120.55.70.81:8088/dajiaserver/' + value.img + '" alt="..."></div>');
+							$('.carousel-indicators').append('<li data-target="#carousel-example-generic" data-slide-to="'+index+'"></li>')
+						});
+						var b_h = $('#banner').width()*646/1722;
+						console.log($('.carousel-inner .item img').height(b_h));
+						//为第一个设置当前显示
+						$('.carousel-inner .item').eq(0).addClass('active');
+						$('.carousel-indicators li').eq(0).addClass('active');
+					}
+				});
+			});
+		</script>
+		<script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+			<script type="text/javascript">
 			var data = {
 				title: ["婚宴酒店", "婚纱摄影", "婚纱礼服", "四大金刚", "婚庆公司", "婚礼甜点", "婚车预定"],
-				describe1: '杭州金溪山庄',
-				describe2: '婚宴酒店',
+				describe1: '杭州金溪山庄',//(酒店名字或者婚纱店)
 				items: ["Wedding-Hotel", "Photography", "Wedding-Dress", "Service-Personal", "Wedding-Company", "Wedding-Dessert", "Wedding-Car"]
 			};
 			var mainContentHtml = template("template", data);
 			$('#container').html(mainContentHtml);
+			
 		</script>
-
-		
-		<script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-		<script src="js/index.js"></script>
-		<script src="js/tool.js"></script>
 	</body>
 
 </html>

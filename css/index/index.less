@@ -187,6 +187,12 @@ body {
 
 #banner {
     margin-top: 10px;
+//      width: 86%;
+//      margin: 20px auto;
+    .carousel-inner > .item > img, .carousel-inner > .item > a > img{
+        width: 100%;
+//      height: 800px;
+    }
 }
 #banner .glyphicon-chevron-left:before,
 .glyphicon-chevron-right:before {
@@ -399,33 +405,42 @@ body {
     padding-top: 1%;
 }
 
-#container .main-content-bottom .main-content-bottom-bottom li,
 #container .main-content-bottom .main-content-bottom-top li {
     text-align: center;
     float: left;
     margin-right: 1%;
     border: 1px solid #8A8A8A;
+    margin-bottom: 10px;
 }
 
-#container .main-content-bottom .main-content-bottom-bottom li a,
+#container .main-content-bottom .main-content-bottom-top li img{
+    transition: transform 0.5s ease-in 0.1s;
+    &:hover {
+        transform: scale(1.2,1.2);
+    }
+}
 #container .main-content-bottom .main-content-bottom-top li a {
     color: #242424;
+    .tt{
+        overflow: hidden;
+    }
 }
 
-#container .main-content-bottom .main-content-bottom-top li {
+#container .main-content-bottom .main-content-bottom-top li{
+    width: 24.15%;
+}
+#container .main-content-bottom .main-content-bottom-top li:nth-child(1),
+#container .main-content-bottom .main-content-bottom-top li:nth-child(2),
+#container .main-content-bottom .main-content-bottom-top li:nth-child(3),
+{
     width: 32.5%;
 }
 
-#container .main-content-bottom .main-content-bottom-bottom li {
-    margin-top: 1%;
-    width: 24%;
-}
-#container .main-content-bottom .main-content-bottom-bottom li:last-child,
-#container .main-content-bottom .main-content-bottom-top li:last-child {
+#container .main-content-bottom .main-content-bottom-top li:last-child,
+#container .main-content-bottom .main-content-bottom-top li:nth-child(3){
     margin-right: 0;
 }
 
-#container .main-content-bottom .main-content-bottom-bottom li img,
 #container .main-content-bottom .main-content-bottom-top li img {
     width: 100%;
 }
@@ -434,13 +449,6 @@ body {
     margin-top: 12px;
     margin-bottom: 12px;
 }
-
-#container .main-content-bottom .main-content-bottom-bottom li p {
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-
-#container .main-content-bottom .main-content-bottom-bottom li {}
 
 /*酒店结束*/
 

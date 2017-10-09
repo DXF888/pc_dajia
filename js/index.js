@@ -5,6 +5,7 @@ $(function() {
 	
 	//默认为第一个时选中  给第一个导航设置背景色
 	$sideNav_li.eq(0).addClass('active');
+//	console.log($('body').width());
 	
 	//监听scrollTOP的值
 	$(window).scroll(function() {
@@ -72,12 +73,18 @@ $(function() {
 			//点击每一个li的时候选为当前选中。
 			$(value).click(function() {
 				if(!(index == $sideNav_li.length-1)){
-					$(this).siblings().removeClass('active');
+					$(this).siblings().removeAttr('class');
 					$(this).addClass('active');
 				}
 			});
 		});
+//		$().offset().top;
+//		function scroll_nav8(){
+//			$("html,body").animate({scrollTop:ot},2000);
+//		}
 	});
-
+	$('#return').on('click',function(){
+		$("html,body").animate({scrollTop:0},2000);
+	});
 
 });
